@@ -26,7 +26,7 @@ class GradientStorage:
     """
     def __init__(self, module):
         self._stored_gradient = None
-        module.register_backward_hook(self.hook)
+        module.register_full_backward_hook(self.hook)
 
     def hook(self, module, grad_in, grad_out):
         self._stored_gradient = grad_out[0]
@@ -155,7 +155,7 @@ def hotflip_attack(averaged_grad,
         )
         if filter is not None:
             gradient_dot_embedding_matrix -= filter
-            #print("Filter applied")
+            
         if not increase_loss:
             gradient_dot_embedding_matrix *= -1
         
@@ -240,8 +240,7 @@ def run_model(args):
 
     # Obtain the initial trigger tokens and label mapping
     if args.initial_trigger:
-
-        initial_trigger = ["the", "good", "the", "bad", "the", "ugly"]
+        initial_trigger = ["the", "good", "bad", "the", "good", "bad", "the"]
         init_ids = tokenizer.convert_tokens_to_ids(initial_trigger)
         init_ids = torch.tensor(init_ids, device=device).unsqueeze(0)
         trigger_ids = tokenizer.convert_tokens_to_ids(initial_trigger)
@@ -295,7 +294,7 @@ def run_model(args):
                 continue
             # Filter special tokens.
             if idx in tokenizer.all_special_ids:
-                logger.debug('Filtered: %s', word)
+                logger.info('Filtered: %s', word)
                 filter[idx] = 1e32
             # Filter capitalized words (lazy way to remove proper nouns).
             """
@@ -303,7 +302,7 @@ def run_model(args):
                 logger.debug('Filtered: %s', word)
                 filter[idx] = 1e32
             """
-    
+
     logger.info('Evaluating baseline')
     logger.info(f"Baseline trigger ids are : {trigger_ids}")
     numerator = 0
