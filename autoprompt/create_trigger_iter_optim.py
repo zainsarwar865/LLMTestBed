@@ -249,13 +249,14 @@ def run_model(args):
 
     # Obtain the initial trigger tokens and label mapping
     if args.initial_trigger:
-        initial_trigger = ["Ġthe", "Ġthe", "Ġgood", "Ġthe", "Ġgood", "Ġbad"]
+        
+        initial_trigger = args.initial_trigger
         init_ids = tokenizer.convert_tokens_to_ids(initial_trigger)
         init_ids = torch.tensor(init_ids, device=device).unsqueeze(0)
         trigger_ids = tokenizer.convert_tokens_to_ids(initial_trigger)
-        logger.info(f'Initial trigger is the following: {initial_trigger}')
+        logger.info(f'Initial triggers are the following: {initial_trigger}')
         
-        logger.info(f'Trigger ids: {trigger_ids}')
+        logger.info(f'Initial Trigger ids are: {trigger_ids}')
         
         assert len(trigger_ids) == templatizer.num_trigger_tokens
     else:

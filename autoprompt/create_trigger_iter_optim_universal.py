@@ -236,17 +236,12 @@ def run_model(args):
 
     # Obtain the initial trigger tokens and label mapping
     if args.initial_trigger:
-        initial_trigger = ["Ġthe", "Ġthe", "Ġgood", "Ġthe", "Ġgood", "Ġbad"]
-        #initial_trigger = ['Ġreviews', 'Ġdreamed', 'Ġstainless', 'pr', 'RE', 'Ġattachments']
+        initial_trigger = args.initial_trigger
         init_ids = tokenizer.convert_tokens_to_ids(initial_trigger)
         init_ids = torch.tensor(init_ids, device=device).unsqueeze(0)
         trigger_ids = tokenizer.convert_tokens_to_ids(initial_trigger)
-        logger.info(f'Initial trigger is the following: {initial_trigger}')
-        
-        logger.info(f'Trigger ids: {trigger_ids}')
-        logger.info(f"temp num trigger is : {templatizer.num_trigger_tokens}")
-        logger.info(f"len of trigger ids is : {len(trigger_ids)}")
-        
+        logger.info(f'Initial triggers: {initial_trigger}')        
+        logger.info(f'Initial Trigger ids: {trigger_ids}')
         assert len(trigger_ids) == templatizer.num_trigger_tokens
     else:
         trigger_ids = [tokenizer.mask_token_id] * templatizer.num_trigger_tokens
@@ -301,7 +296,6 @@ def run_model(args):
                 logger.debug('Filtered: %s', word)
                 filter[idx] = 1e32
             """
-
 
     logger.info('Evaluating baseline')
     logger.info(f"Baseline trigger ids are : {trigger_ids}")
@@ -442,9 +436,6 @@ def run_model(args):
     logger.info(f'Best dev metric: {best_dev_metric}')
     logger.info(f'Best flip rate : {1 - best_dev_acc_metric}')
 
-
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--train', type=Path, required=True, help='Train data path')
@@ -464,7 +455,6 @@ if __name__ == '__main__':
                              'approach for removing proper nouns.')
     parser.add_argument('--print-lama', action='store_true',
                         help='Prints best trigger in LAMA format.')
-
     parser.add_argument('--initial-trigger', nargs='+', type=str, default=None, help='Manual prompt')
     parser.add_argument('--label-field', type=str, default='label',
                         help='Name of the label field')
