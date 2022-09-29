@@ -196,6 +196,19 @@ def isVariable(idx, tokenizer, allowed_words):
                     break 
     return _isVar
 
+def is_all_capps_or_num(idx, tokenizer):
+    word = tokenizer.decode([idx])
+    word = word.replace(" ", "")
+    _is_all_caps_nums = False
+    word_upper = word.upper()
+    if(word_upper == word):
+        _is_all_caps_nums = True
+    # Check if it contains a number    
+    if (any(char.isdigit() for char in word)):
+        _is_all_caps_nums = True
+    return _is_all_caps_nums
+
+
 def replace_trigger_tokens(model_inputs, trigger_ids, trigger_mask):
     out = model_inputs.copy()    
     # Count number of false values
@@ -324,6 +337,10 @@ def run_model(args):
                 print(word)
                 filter[idx] = 1e32
 
+            if is_all_capps_or_num(idx, tokenizer):
+                logger.debug(f"Filtered {word}")
+                print(word)
+                filter[idx] = 1e32
 
     # creating the filter for the first iteration of token generation
     first_iter_filter = filter.detach().clone()
@@ -503,6 +520,7 @@ def run_model(args):
                         #print(f"Adversarial : {adv_text_pred}")
                 logger.info(f"\n\n")
                 break
+            break
     flip_rate = total_incorrect / total_samples + 1e-32
     logger.info(f"Total incorrect are : {total_incorrect}")
     logger.info(f"Total samples are : {total_samples}")
