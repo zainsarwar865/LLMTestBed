@@ -29,6 +29,31 @@ with jsonlines.open("/home/zsarwar/NLP/autoprompt/data/Roberta_100_Short.jsonl",
 
 
 
+all_entities = []
+all_facts = []
+with jsonlines.open("/home/zsarwar/NLP/autoprompt/data/Roberta_100_Short.jsonl", 'r') as in_file:
+    for fact in in_file:
+        curr_fact = fact['Pre_Mask'] + fact['Label'] + fact['Post_Mask'].replace(" .", ".")
+        prompt = fact['Prompt'].replace('[Y]', fact['Label']).replace(" .", ".")
+        entity = curr_fact
+        if prompt[-1] == ".":
+            prompt = prompt[0:-1]
+
+        if entity[-1] == ".":
+            entity = entity[0:-1]
+        
+        pre_x = prompt.find('[X]')
+        entity = entity[pre_x:]
+        post_x_txt = prompt[pre_x+3:]
+        if(len(post_x_txt) > 1):
+            post_x_idx = entity.find(post_x_txt)
+            entity = entity[0:post_x_idx]
+        
+        all_entities.append(entity)
+        all_facts.append(curr_fact)
+
+
+
 def google_search_api(search_term, api_key, cse_id, num_results,num_iters,
                        **kwargs):
     start_index = -9
@@ -53,10 +78,10 @@ def get_urls_api(search_results):
     return extracted_urls
 
 
-for idx, fact in enumerate(all_facts[15:17]):
+for idx, fact in enumerate(all_facts[0:5]):
   out_file = jsonlines.open("/home/zsarwar/NLP/autoprompt/data/Roberta_100_Short_Wiki.jsonl", 'a')
   search_results = []
-  api_results =  google_search_api(search_term = fact, api_key = API_KEY,
+  api_results =  google_search_api(search_term = all_entities[idx], api_key = API_KEY,
                                   cse_id = SEID,
                                   num_results = 5,num_iters = 1)
   search_results.append(api_results)
@@ -89,6 +114,17 @@ for idx, fact in enumerate(all_facts[15:17]):
       all_articles[f'article_{article_num}'] = art
       all_urls[f'URL_{article_num}'] = link
       article_num+=1  
-  out_dict = {"Index" : idx, "Fact" : fact, "URLS" : all_urls, 'Articles': all_articles}
+  out_dict = {"Index" : idx, "Fact" : fact, "Entity" : all_entities[idx], "URLS" : all_urls, 'Articles': all_articles}
   out_file.write(out_dict)
   out_file.close()
+
+
+
+
+
+
+
+
+
+
+
