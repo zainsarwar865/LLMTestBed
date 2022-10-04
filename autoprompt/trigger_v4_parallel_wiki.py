@@ -19,6 +19,7 @@ import autoprompt.utils_v4 as utils_v4
 import spacy
 from spacy import displacy
 import nltk
+import jsonlines
 
 NER = spacy.load("en_core_web_sm")
 logger = logging.getLogger(__name__)
@@ -28,7 +29,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 # Load all the facts
 all_pad_prompts = []
-with jsonlines.open("/home/zsarwar/NLP/autoprompt/Testing_stuff_10.jsonl", 'r') as fact_dicts:
+with jsonlines.open("/home/zsarwar/NLP/autoprompt/data/Roberta_100_Short_Wiki.jsonl", 'r') as fact_dicts:
     for dict in fact_dicts:
         all_pad_prompts.append(dict)
 
@@ -312,12 +313,12 @@ def run_model(args):
     if args.perturbed:
         train_dataset = utils_v4.load_augmented_trigger_dataset(args.train, templatizer, limit=args.limit)
     else:
-        train_dataset = utils_v4.load_trigger_dataset(args.train, templatizer, use_ctx=args.use_ctx, limit=args.limit)
+        train_dataset = utils_v4.load_trigger_dataset(args.train, templatizer, start_idx = args.start_index, use_ctx=args.use_ctx, limit=args.limit)
     train_loader = DataLoader(train_dataset, batch_size=args.bsz, shuffle=False, collate_fn=collator)
     if args.perturbed:
         dev_dataset = utils_v4.load_augmented_trigger_dataset(args.train, templatizer)
     else:
-        dev_dataset = utils_v4.load_trigger_dataset(args.dev, templatizer, use_ctx=args.use_ctx)
+        dev_dataset = utils_v4.load_trigger_dataset(args.train, templatizer, start_idx = args.start_index, use_ctx=args.use_ctx)
     dev_loader = DataLoader(dev_dataset, batch_size=args.eval_size, shuffle=False, collate_fn=collator)
     allowed_words = ['iPhone', 'McC', 'YouTube', 'McDonald', 'LinkedIn', 'MPs', 'WhatsApp', 'iOS', 'McCain', 'McG', 'McD', 'McConnell', 'McGregor', 'McCarthy', 'iPad', 'LeBron', 'JPMorgan', 'IoT', 'OnePlus', 'realDonaldTrump', 'BuzzFeed', 'iTunes', 'iPhones', 'SpaceX', 'McLaren', 'PhD', 'PlayStation', 'McKin', 'McCabe', 'McCoy', 'TVs', 'FedEx', 'McGr', 'McGu', 'McMahon', 'CEOs', 'McMaster', 'JavaScript', 'WikiLeaks', 'eBay', 'McKenzie', 'McInt', 'BlackBerry', 'McCorm', 'DeVos', 'PayPal', 'MacBook', 'McCull', 'PCs', 'McKay', 'MacDonald', 'McCann', 'McGee', 'NGOs', 'GHz', 'McKenna', 'McCartney', 'HuffPost', 'McGill', 'WiFi', 'McDonnell', 'iPads', 'GoPro', 'iPod', 'MacArthur', 'VMware', 'macOS', 'CDs', 'McAuliffe', 'WordPress', 'iCloud', 'YouTube', 'GeForce', 'GPUs', 'CPUs', 'GitHub', 'PowerPoint', 'eSports', 'ObamaCare', 'iPhone', 'UFOs', 'mRNA', 'StarCraft', 'LinkedIn']
     """
@@ -372,7 +373,7 @@ def run_model(args):
     numerator = 0
     numerator_acc = 0
     denominator = 0
-    for model_inputs, labels in tqdm(dev_loader):
+    for x, (model_inputs, labels) in tqdm(enumerate(dev_loader, args.start_index)):
         model_inputs = {k: v.to(device) for k, v in model_inputs.items()}
         labels = labels.to(device)
         with torch.no_grad():
@@ -386,8 +387,6 @@ def run_model(args):
     logger.info(f'Dev acc metric baseline is : {acc_metric_base}')
     best_dev_metric = 10
     best_dev_acc_metric = 1
-
-    
     # Measure elapsed time of trigger search
     start = time.time()
     # precalculating the normalized embeddings
@@ -397,6 +396,8 @@ def run_model(args):
         0,
         1
     )
+    
+    exit()
     # intializing GPT-2
     gpt_model = GPT2LMHeadModel.from_pretrained('gpt2-xl')
     gpt_tokenizer = GPT2Tokenizer.from_pretrained('gpt2-xl')
@@ -418,8 +419,9 @@ def run_model(args):
     total_incorrect = 0
     model.zero_grad()
     averaged_grad = None
+    
     # Accumulate
-    for x, (model_inputs, labels) in tqdm(enumerate(train_loader)):
+    for x, (model_inputs, labels) in tqdm(enumerate(train_loader, args.start_index)):
         new_example=True
         total_samples+=1    
         # Start from scratch for each example
@@ -472,7 +474,6 @@ def run_model(args):
             # Batched og + trigger prompts in text form
             original_prompts = tokenizer.batch_decode(original_prompt_ids, skip_special_tokens=True)
             candidates_strs = tokenizer.batch_decode(candidates.unsqueeze(1))
-
             # Check if current prompt matches GPT's padding text prompt
             gpt_padding_corr_fact = all_pad_prompts[x]['Fact']
             if gpt_padding_corr_fact in original_prompts[0]:
@@ -480,21 +481,18 @@ def run_model(args):
                 # Check if we have an article
                 tot_articles = len(all_pad_prompts[1]['Articles'])
                 if tot_articles > 1:
-                    padding_text = ' '.join(tokenize.sent_tokenize(all_pad_prompts[x]['Articles']['article_1'])[0:4])
+                    padding_text = ' '.join(tokenize.sent_tokenize(all_pad_prompts[x]['Articles']['article_0'])[0:4])
                 else:
                     padding_text = ""
             else:
                 padding_text = ""
-
             padding_text_batch = [padding_text for i in range(len(original_prompts))]
             # Appending padded text to the original prompts
             padded_original_prompts = [padding_text + original_prompts[i] for i in range(len(original_prompts))]
             temp_strings = [padded_original_prompts[i] + candidates_strs[i] for i in range(len(original_prompts))]
-
             # Encode for GPT-2 Generations and generate
             gpt_encoded_prompts = gpt_tokenizer.batch_encode_plus(temp_strings, add_special_tokens=True, return_attention_mask=True, padding='longest', return_tensors='pt').to(device) 
-            gpt_outputs = gpt_model.generate(inputs=gpt_encoded_prompts['input_ids'], attention_mask=gpt_encoded_prompts['attention_mask'], do_sample=True, top_p=0.96, output_scores=False, return_dict_in_generate=True, max_length=80)
-
+            gpt_outputs = gpt_model.generate(inputs=gpt_encoded_prompts['input_ids'], attention_mask=gpt_encoded_prompts['attention_mask'], do_sample=True, top_p=0.96, output_scores=False, return_dict_in_generate=True, max_length=250)
             # Encode padding text separately for computing length
             gpt_encoded_padding_text = gpt_tokenizer.batch_encode_plus(padding_text_batch, add_special_tokens=True, return_attention_mask=True, padding='longest', return_tensors='pt').to(device) 
             num_padding_tokens = len(gpt_encoded_padding_text['input_ids'][0])
@@ -502,7 +500,6 @@ def run_model(args):
             # Need Entire GPT-2 Text here for fluent_text
             gpt_all_tokens = gpt_outputs['sequences'][:, num_padding_tokens:]
             gpt_all_tokens_str = gpt_tokenizer.batch_decode(gpt_all_tokens, skip_special_tokens=True)
-            
             #NLTK for all_tokens    
             gpt_all_str_sents = [tokenize.sent_tokenize(sent) for sent in gpt_all_tokens_str]
             gpt_all_sents_two = [' '.join(all_sents[0:2]) for all_sents in gpt_all_str_sents]
@@ -552,6 +549,8 @@ def run_model(args):
                 logger.info(f"\n\n")
                 break
             break
+        if(total_samples == args.examples_needed):
+            break
     flip_rate = total_incorrect / total_samples + 1e-32
     logger.info(f"Total incorrect are : {total_incorrect}")
     logger.info(f"Total samples are : {total_samples}")
@@ -559,9 +558,9 @@ def run_model(args):
     #print(f"Flip rate is : {flip_rate}")       
 parser = argparse.ArgumentParser()
 parser.add_argument('--train', type=Path, default='/home/zsarwar/NLP/autoprompt/data/correctly_classified_roberta_large_autoprompt_format_shorter.jsonl', help='Train data path')
-parser.add_argument('--dev', type=Path, default='/home/zsarwar/NLP/autoprompt/data/correctly_classified_roberta_large_autoprompt_format_shorter.jsonl',help='Dev data path')
 parser.add_argument('--template', type=str,default='<s> {Pre_Mask}[P]{Post_Mask}[T][T][T][T][T]</s>', help='Template string')
 parser.add_argument('--label-map', type=str, default=None, help='JSON object defining label map')
+parser.add_argument('--start_index', type=int, default=0, help='Index to start generation from')
 # LAMA-specific
 parser.add_argument('--tokenize-labels', action='store_true',
                     help='If specified labels are split into word pieces.'
@@ -573,7 +572,7 @@ parser.add_argument('--filter', action='store_true', default=True,
                             'approach for removing proper nouns.')
 parser.add_argument('--print-lama', action='store_true',
                     help='Prints best trigger in LAMA format.')
-parser.add_argument('--logfile', type=str, default='v5_all')
+parser.add_argument('--logfile', type=str, default='F50_with_wiki')
 parser.add_argument('--initial-trigger', nargs='+', type=str, default=None, help='Manual prompt')
 parser.add_argument('--label-field', type=str, default='Prediction',
                     help='Name of the label field')
@@ -592,6 +591,7 @@ parser.add_argument('--perturbed', action='store_true',
                     help='Perturbed sentence evaluation of relation extraction: replace each object in dataset with a random other object')
 parser.add_argument('--patience', type=int, default=5)
 parser.add_argument('--num-cand', type=int, default=10)
+parser.add_argument('--examples_needed', type=int, default=1)
 parser.add_argument('--sentence-size', type=int, default=50)
 parser.add_argument('--debug', action='store_true')
 args = parser.parse_args()
