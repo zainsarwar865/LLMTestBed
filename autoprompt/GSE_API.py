@@ -1,4 +1,3 @@
-
 from googlesearch import search
 from newspaper import Article
 from newsfetch.news import newspaper
@@ -18,6 +17,7 @@ import jsonlines
 
 API_KEY = "AIzaSyAC2fKvrczedZhBfZmSmYDRaYvSF_nm5HU"
 SEID = "017236688157949926015:-2mk2err3ps"
+
 
 
 # Load all the facts
