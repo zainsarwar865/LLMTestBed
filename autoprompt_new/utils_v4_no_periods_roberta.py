@@ -151,17 +151,27 @@ class TriggerTemplatizer:
         
         text = text.replace(" [P]", "[P]").replace("[P] ", "[P]")
         text = text.replace(" .", ".")
+        if text[-8] == ".":
+           text=(text[::-1].replace(".", "", 1))[::-1]
+        
         model_inputs = self._tokenizer.encode_plus(
             text,
             add_special_tokens=self._add_special_tokens,
             return_tensors='pt'
         )
         input_ids = model_inputs['input_ids']        
+        #comma_idx = torch.where(model_inputs['input_ids'][0] == 2156)[0].item()
+        #model_inputs['input_ids'][0, comma_idx] = 6
+        
         trigger_mask = input_ids.eq(self._tokenizer.trigger_token_id)
+        
         predict_mask = input_ids.eq(self._tokenizer.predict_token_id)
         input_ids[predict_mask] = self._tokenizer.mask_token_id
+
+
         model_inputs['trigger_mask'] = trigger_mask
         model_inputs['predict_mask'] = predict_mask
+
         # For relation extraction with BERT, update token_type_ids to reflect the two different sequences
         if self._use_ctx and self._config.model_type == 'bert':
             sep_token_indices = (input_ids.squeeze(0) == self._tokenizer.convert_tokens_to_ids(self._tokenizer.sep_token)).nonzero().flatten()
