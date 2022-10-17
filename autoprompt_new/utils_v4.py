@@ -114,10 +114,12 @@ class TriggerTemplatizer:
                  template,
                  config,
                  tokenizer,
+                 model,
                  label_field='label',
                  label_map=None,
                  tokenize_labels=False,
                  add_special_tokens=False,
+                 remove_periods=False,
                  use_ctx=False):
         if not hasattr(tokenizer, 'predict_token') or \
            not hasattr(tokenizer, 'trigger_token'):
@@ -133,6 +135,8 @@ class TriggerTemplatizer:
         self._tokenize_labels = tokenize_labels
         self._add_special_tokens = add_special_tokens
         self._use_ctx = use_ctx
+        self._model = model
+        self._remove_periods = remove_periods
 
     @property   
     def num_trigger_tokens(self):
@@ -151,6 +155,16 @@ class TriggerTemplatizer:
         
         text = text.replace(" [P]", "[P]").replace("[P] ", "[P]")
         text = text.replace(" .", ".")
+
+
+        if(self._remove_periods):
+            if('roberta' in self._model):
+                if text[-8] == ".":
+                    text=(text[::-1].replace(".", "", 1))[::-1]
+            elif('bert' in self._model):
+                if text[-9] == ".":
+                    text=(text[::-1].replace(".", "", 1))[::-1]
+        
         model_inputs = self._tokenizer.encode_plus(
             text,
             add_special_tokens=self._add_special_tokens,
@@ -194,13 +208,11 @@ def add_task_specific_tokens(tokenizer):
     tokenizer.lama_y = '[Y]'
     tokenizer.lama_x_id = tokenizer.convert_tokens_to_ids('[Y]')
 
-
 def load_tsv(fname):
     with open(fname, 'r') as f:
         reader = csv.DictReader(f, delimiter='\t')
         for row in reader:
             yield row
-
 
 def load_jsonl(fname):
     with open(fname, 'r') as f:
@@ -212,45 +224,33 @@ LOADERS = {
     '.jsonl': load_jsonl
 }
 
-
-def load_trigger_dataset(fname, templatizer, use_ctx, start_idx, limit=None):
+def load_trigger_dataset(fname, templatizer, use_ctx, start_idx, end_idx=10000, limit=None):
     loader = LOADERS[fname.suffix]
+    loader_list = list(loader(fname))
     instances = []
-
-    for idx, x in enumerate(loader(fname)):
-        
-        if(idx < start_idx):
-            idx+=1
-            continue
+    for idx, x in enumerate(range(start_idx, end_idx), start_idx):
         try:
             if use_ctx:
                 # For relation extraction, skip facts that don't have context sentence
-                if 'evidences' not in x:
+                if 'evidences' not in loader_list[x]:
                     logger.warning('Skipping RE sample because it lacks context sentences: {}'.format(x))
                     continue
-
-                evidences = x['evidences']
-                    
+                evidences = x['evidences']                    
                 # Randomly pick a context sentence
                 obj_surface, masked_sent = random.choice([(evidence['obj_surface'], evidence['masked_sentence']) for evidence in evidences])
                 words = masked_sent.split()
                 if len(words) > MAX_CONTEXT_LEN:
                     # If the masked sentence is too long, use the first X tokens. For training we want to keep as many samples as we can.
                     masked_sent = ' '.join(words[:MAX_CONTEXT_LEN])
-                
                 # If truncated context sentence still has MASK, we need to replace it with object surface
                 # We explicitly use [MASK] because all TREx fact's context sentences use it
                 context = masked_sent.replace('[MASK]', obj_surface)
-                x['context'] = context
-                
-                model_inputs, label_id = templatizer(x)
-                
+                loader_list[x]['context'] = context
+                model_inputs, label_id = templatizer(loader_list[x])
             else:
-
-                model_inputs, label_id = templatizer(x)
-                
+                model_inputs, label_id = templatizer(loader_list[x])
         except ValueError as e:
-            logger.warning('Encountered error "%s" when processing "%s".  Skipping.', e, x)
+            logger.warning('Encountered error "%s" when processing "%s".  Skipping.', e, loader_list[x])
             continue
         else:
             instances.append((model_inputs, label_id))
@@ -258,7 +258,6 @@ def load_trigger_dataset(fname, templatizer, use_ctx, start_idx, limit=None):
         return random.sample(instances, limit)
     else:
         return instances
-
 
 def load_augmented_trigger_dataset(fname, templatizer, limit=None):
     loader = LOADERS[fname.suffix]

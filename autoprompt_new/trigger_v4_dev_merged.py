@@ -19,7 +19,7 @@ from nltk import tokenize
 import spacy
 from spacy import displacy
 import nltk 
-#import autoprompt.utils_v4 as utils_v4
+import autoprompt.utils_v4 as utils_v4
 
 NER = spacy.load("en_core_web_sm")
 logger = logging.getLogger(__name__)
@@ -246,11 +246,7 @@ def replace_trigger_tokens(model_inputs, trigger_ids, trigger_mask):
     return out
 
 
-def run_model(args):
-    
-    
-
-    
+def run_model(args):   
     set_seed(args.seed)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     logger.info('Loading model, tokenizer, etc.')
@@ -270,10 +266,12 @@ def run_model(args):
         args.template,
         config,
         tokenizer,
+        model=args.model_name,
         label_map=label_map,
         label_field=args.label_field,
         tokenize_labels=args.tokenize_labels,
         add_special_tokens=False,
+        remove_periods=args.remove_periods,
         use_ctx=args.use_ctx
     )
     # Obtain the initial trigger tokens and label mapping
@@ -310,7 +308,7 @@ def run_model(args):
     if args.perturbed:
         train_dataset = utils_v4.load_augmented_trigger_dataset(args.train, templatizer, limit=args.limit)
     else:
-        train_dataset = utils_v4.load_trigger_dataset(args.train, templatizer, start_idx=0, use_ctx=args.use_ctx, limit=args.limit)
+        train_dataset = utils_v4.load_trigger_dataset(args.train, templatizer, start_idx=args.start_idx, end_idx=args.end_idx, use_ctx=args.use_ctx, limit=args.limit)
     train_loader = DataLoader(train_dataset, batch_size=args.bsz, shuffle=False, collate_fn=collator)
     allowed_words = ['iPhone', 'McC', 'YouTube', 'McDonald', 'LinkedIn', 'MPs', 'WhatsApp', 'iOS', 'McCain', 'McG', 'McD', 'McConnell', 'McGregor', 'McCarthy', 'iPad', 'LeBron', 'JPMorgan', 'IoT', 'OnePlus', 'realDonaldTrump', 'BuzzFeed', 'iTunes', 'iPhones', 'SpaceX', 'McLaren', 'PhD', 'PlayStation', 'McKin', 'McCabe', 'McCoy', 'TVs', 'FedEx', 'McGr', 'McGu', 'McMahon', 'CEOs', 'McMaster', 'JavaScript', 'WikiLeaks', 'eBay', 'McKenzie', 'McInt', 'BlackBerry', 'McCorm', 'DeVos', 'PayPal', 'MacBook', 'McCull', 'PCs', 'McKay', 'MacDonald', 'McCann', 'McGee', 'NGOs', 'GHz', 'McKenna', 'McCartney', 'HuffPost', 'McGill', 'WiFi', 'McDonnell', 'iPads', 'GoPro', 'iPod', 'MacArthur', 'VMware', 'macOS', 'CDs', 'McAuliffe', 'WordPress', 'iCloud', 'YouTube', 'GeForce', 'GPUs', 'CPUs', 'GitHub', 'PowerPoint', 'eSports', 'ObamaCare', 'iPhone', 'UFOs', 'mRNA', 'StarCraft', 'LinkedIn']
     """
@@ -443,8 +441,6 @@ def run_model(args):
     for idx, (model_inputs, labels) in tqdm(enumerate(train_loader)):
         new_example=True
         total_samples+=1    
-        if(total_samples > 50) :
-            break
         # Start from scratch for each example
         all_indices_triggers.append(idx)
         trigger_ids = init_ids.clone()
@@ -701,7 +697,7 @@ parser.add_argument('--sentence-size', type=int, default=50)
 parser.add_argument('--debug', action='store_true')
 
 # Arguments needed in bashfile
-parser.add_argument('--train', type=Path, default='/home/zsarwar/NLP/autoprompt/data/datasets/final/correctly_classified_bert_large_cased_autoprompt_format_single_entity_2500.jsonl', help='Train data path')
+parser.add_argument('--train', type=Path)
 parser.add_argument('--template', type=str,default='<s>{Pre_Mask}[P]{Post_Mask}[T]</s>', help='Template string', required=False)
 parser.add_argument('--filtered_vocab', type=str, default=None, help='JSON object defining label map')
 parser.add_argument('--model-name', type=str, default='bert-large-cased')
@@ -710,6 +706,8 @@ parser.add_argument('--include_adv_token', action='store_true', default=False )
 parser.add_argument('--include_wikipedia_padding', action='store_true', default=False )
 parser.add_argument('--remove_periods', default=False, action='store_true')
 parser.add_argument('--num-cand', type=int, default=10)
+parser.add_argument('--start_idx', type=int, default=0)
+parser.add_argument('--end_idx', type=int, default=500)
 
 
 #/home/zsarwar/NLP/autoprompt/data/datasets/final/correctly_classified_bert_large_cased_autoprompt_format_single_entity_500.jsonl
@@ -720,24 +718,20 @@ if args.debug:
         level = logging.DEBUG
 else:
         level = logging.INFO
+
+if 'roberta' in args.model_name:
+    args.template = "<s>{Pre_Mask}[P]{Post_Mask}[T]</s>"
+    args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/roberta_large_single_entity_2500.jsonl")
+elif 'bert' in args.model_name:
+    args.template = "[CLS]{Pre_Mask}[P]{Post_Mask}[T][SEP]"
+    args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/bert_large_cased_single_entity_2500.jsonl")
+
+
 logfile = "/home/zsarwar/NLP/autoprompt/autoprompt/Results/"+ str(args.train).split("/")[-1].split(".")[0]  +  "_" + args.logfile    
 numpy_file = "/home/zsarwar/NLP/autoprompt/autoprompt/Results/Arrays/" + str(args.train).split("/")[-1].split(".")[0]  +  "_" + args.logfile + ".npy"
 
 logging.basicConfig(filename=logfile,level=level)
 
-if 'roberta' in args.model_name:
-        args.template = "<s>{Pre_Mask}[P]{Post_Mask}[T]</s>"
-        if(args.remove_periods):
-            import autoprompt.utils_v4_no_periods_roberta as utils_v4
-        else:
-            import autoprompt.utils_v4 as utils_v4
-elif 'bert' in args.model_name:
-    args.template = "[CLS]{Pre_Mask}[P]{Post_Mask}[T][SEP]"
-    if(args.remove_periods):
 
-        import autoprompt.utils_v4_no_periods_bert as utils_v4
-    else:
-
-        import autoprompt.utils_v4 as utils_v4
 
 run_model(args)
