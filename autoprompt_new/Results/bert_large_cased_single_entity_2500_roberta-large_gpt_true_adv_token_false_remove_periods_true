@@ -1,0 +1,351 @@
+INFO:__main__:Loading model, tokenizer, etc.
+INFO:__main__:No label map
+INFO:__main__:no initial trigger provided, using 1 mask tokens
+INFO:__main__:Loading datasets
+INFO:__main__:Evaluating baseline
+INFO:__main__:Baseline trigger ids are : tensor([[50264]], device='cuda:0')
+INFO:__main__:Index : 0
+INFO:__main__:Input : <s> Gerakan Pramuka Indonesia was employed in<mask>.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred : .
+INFO:__main__:
+
+
+INFO:__main__:Index : 1
+INFO:__main__:Input : <s> Balbinus expired at<mask>.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred : .
+INFO:__main__:
+
+
+INFO:__main__:Index : 2
+INFO:__main__:Input : <s><mask> was the language of Ram Rajya.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred : English
+INFO:__main__:
+
+
+INFO:__main__:Index : 3
+INFO:__main__:Input : <s> iPod shuffle, developed by<mask>.<mask></s>
+INFO:__main__:Label : Apple
+INFO:__main__:Pred :  Microsoft
+INFO:__main__:
+
+
+INFO:__main__:Index : 4
+INFO:__main__:Input : <s> as a citizen of<mask>, Philippe Leclerc de Hauteclocque.<mask></s>
+INFO:__main__:Label : France
+INFO:__main__:Pred :  France
+INFO:__main__:
+
+
+INFO:__main__:Index : 5
+INFO:__main__:Input : <s> as a citizen of<mask>, Priyanka Vadra.<mask></s>
+INFO:__main__:Label : India
+INFO:__main__:Pred :  India
+INFO:__main__:
+
+
+INFO:__main__:Index : 6
+INFO:__main__:Input : <s> The headquarters of Global Humanitarian Forum is in<mask>.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred :  Geneva
+INFO:__main__:
+
+
+INFO:__main__:Index : 7
+INFO:__main__:Input : <s> The headquarter of Sheffield Wednesday F.C. is in<mask>.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred :  Sheffield
+INFO:__main__:
+
+
+INFO:__main__:Index : 8
+INFO:__main__:Input : <s> Luis del Sol, who plays in<mask> position.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred :  every
+INFO:__main__:
+
+
+INFO:__main__:Index : 9
+INFO:__main__:Input : <s> BBC Persian Television is owned by<mask>.<mask></s>
+INFO:__main__:Label : BBC
+INFO:__main__:Pred :  Disney
+INFO:__main__:
+
+
+INFO:__main__:Index : 10
+INFO:__main__:Input : <s> The headquarters of Crystal Palace Baltimore is in<mask>.<mask></s>
+INFO:__main__:Label : Baltimore
+INFO:__main__:Pred :  Baltimore
+INFO:__main__:
+
+
+INFO:__main__:Index : 11
+INFO:__main__:Input : <s> Google Trends is owned by<mask>.<mask></s>
+INFO:__main__:Label : Google
+INFO:__main__:Pred :  Google
+INFO:__main__:
+
+
+INFO:__main__:Index : 12
+INFO:__main__:Input : <s> Silvio Orlando used to communicate in<mask>.<mask></s>
+INFO:__main__:Label : Italian
+INFO:__main__:Pred :  Spanish
+INFO:__main__:
+
+
+INFO:__main__:Index : 13
+INFO:__main__:Input : <s> The headquarter of Wayne State University Press is located in<mask>.<mask></s>
+INFO:__main__:Label : Detroit
+INFO:__main__:Pred :  Detroit
+INFO:__main__:
+
+
+INFO:__main__:Index : 14
+INFO:__main__:Input : <s><mask> owns iTunes Radio.<mask></s>
+INFO:__main__:Label : Apple
+INFO:__main__:Pred : Apple
+INFO:__main__:
+
+
+INFO:__main__:Index : 15
+INFO:__main__:Input : <s> Jean Sibelius took up work in<mask>.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred :  Sweden
+INFO:__main__:
+
+
+INFO:__main__:Index : 16
+INFO:__main__:Input : <s> Sheridan Morley died in<mask>.<mask></s>
+INFO:__main__:Label : London
+INFO:__main__:Pred :  2006
+INFO:__main__:
+
+
+INFO:__main__:Index : 17
+INFO:__main__:Input : <s> Hermann Ebbinghaus works in the field of<mask>.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred :  education
+INFO:__main__:
+
+
+INFO:__main__:Index : 18
+INFO:__main__:Input : <s> Viktor Chernomyrdin passed away in<mask>.<mask></s>
+INFO:__main__:Label : Moscow
+INFO:__main__:Pred :  2006
+INFO:__main__:
+
+
+INFO:__main__:Index : 19
+INFO:__main__:Input : <s> Nikolaus Dumba was born in<mask>.<mask></s>
+INFO:__main__:Label : <unk>
+INFO:__main__:Pred :  Sweden
+INFO:__main__:
+
+
+INFO:__main__:Dev metric: -34.64981502033753
+INFO:__main__:Dev acc metric baseline is : 0.04999999999999975
+INFO:__main__:Index  : 0
+INFO:__main__:Original  :  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 0:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 1:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 2:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 3:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 4:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 5:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 6:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 7:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 8:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:Adversarial 9:  Gerakan Pramuka Indonesia was employed in.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 1
+INFO:__main__:Original  :  Balbinus expired at.
+INFO:__main__:Adversarial 0:  Balbinus expired at.
+INFO:__main__:Adversarial 1:  Balbinus expired at.
+INFO:__main__:Adversarial 2:  Balbinus expired at.
+INFO:__main__:Adversarial 3:  Balbinus expired at.
+INFO:__main__:Adversarial 4:  Balbinus expired at.
+INFO:__main__:Adversarial 5:  Balbinus expired at.....
+INFO:__main__:Adversarial 6:  Balbinus expired at.
+INFO:__main__:Adversarial 7:  Balbinus expired at.
+INFO:__main__:Adversarial 8:  Balbinus expired at.
+INFO:__main__:Adversarial 9:  Balbinus expired at.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 2
+INFO:__main__:Original  :  was the language of Ram Rajya.
+INFO:__main__:Adversarial 0:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 1:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 2:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 3:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 4:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 5:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 6:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 7:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 8:  was the language of Ram Rajya.
+INFO:__main__:Adversarial 9:  was the language of Ram Rajya.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 3
+INFO:__main__:Original  :  iPod shuffle, developed byApple.
+INFO:__main__:Adversarial 0:  iPod shuffle, developed by Microsoft.
+INFO:__main__:Adversarial 1:  iPod shuffle, developed by Apple.
+INFO:__main__:Adversarial 2:  iPod shuffle, developed by Amazon.com.
+INFO:__main__:Adversarial 3:  iPod shuffle, developed by Apple.
+INFO:__main__:Adversarial 4:  iPod shuffle, developed by Amazon.com, used an optical storage device that could store hundreds of songs in a small space.
+INFO:__main__:Adversarial 5:  iPod shuffle, developed by Amazon.com.
+INFO:__main__:Adversarial 6:  iPod shuffle, developed by Amazon.com.
+INFO:__main__:Adversarial 7:  iPod shuffle, developed by Apple.com and the iTunes App Store, allows users to browse and stream music from the iPod, using the built-in headphone jack and a 3.5mm stereo connection, playback is sound quality of a high-quality compact disc.Apple designed a special iPod dock to allow the iPod to be used as a standard audio source for its external DAC or power amplifier, while it is connected to a Mac's headphone jack or speaker output.
+INFO:__main__:Adversarial 8:  iPod shuffle, developed by Apple.com in 2005, is Apple's attempt to take on the iPod shuffle, developed by Nokia.
+INFO:__main__:Adversarial 9:  iPod shuffle, developed by Microsoft.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 4
+INFO:__main__:Original  :  as a citizen ofFrance, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 0:  as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 1:  as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 2:  as a citizen of Luxembourg, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 3:  as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 4:  as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 5:  as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 6:  as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 7:  as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 8:  as a citizen of Paris, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 9:  as a citizen of Paris, Philippe Leclerc de Hauteclocque.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 5
+INFO:__main__:Original  :  as a citizen ofIndia, Priyanka Vadra.
+INFO:__main__:Adversarial 0:  as a citizen of India, Priyanka Vadra.
+INFO:__main__:Adversarial 1:  as a citizen of India, Priyanka Vadra.She is a proud Indian.
+INFO:__main__:Adversarial 2:  as a citizen of India, Priyanka Vadra.
+INFO:__main__:Adversarial 3:  as a citizen of India, Priyanka Vadra.
+INFO:__main__:Adversarial 4:  as a citizen of India, Priyanka Vadra.
+INFO:__main__:Adversarial 5:  as a citizen of India, Priyanka Vadra.The issue has also led to a huge controversy, with one Congress MP alleging that Congress leader Mani Shankar Aiyar had used "Narendra Modi ji" as a slogan in his speeches.Congress has accused the BJP-led NDA of going "nuclear" and the government is expected to respond soon.
+INFO:__main__:Adversarial 6:  as a citizen of India, Priyanka Vadra.
+INFO:__main__:Adversarial 8:  as a citizen of India, Priyanka Vadra.
+INFO:__main__:Adversarial 9:  as a citizen of India, Priyanka Vadra.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 6
+INFO:__main__:Original  :  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 0:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 1:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 2:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 3:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 4:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 5:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 6:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 7:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 8:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:Adversarial 9:  The headquarters of Global Humanitarian Forum is in.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 7
+INFO:__main__:Original  :  The headquarter of Sheffield Wednesday F.C. is in.
+INFO:__main__:Adversarial 0:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 1:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 2:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 3:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 4:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 5:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 6:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 7:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 8:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:Adversarial 9:  The headquarter of Sheffield Wednesday F.C.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 8
+INFO:__main__:Original  :  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 0:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 1:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 2:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 4:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 5:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 6:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 7:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 8:  Luis del Sol, who plays in position.
+INFO:__main__:Adversarial 9:  Luis del Sol, who plays in position.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 9
+INFO:__main__:Original  :  BBC Persian Television is owned byBBC.
+INFO:__main__:Adversarial 0:   Iran Persian Television is owned byBBC.
+INFO:__main__:Adversarial 1:   BBC Persian Television is owned byBBC.
+INFO:__main__:Adversarial 4:   Reuters Persian Television is owned byBBC.
+INFO:__main__:Adversarial 5:   BBC Persian Television is owned byBBC.
+INFO:__main__:Adversarial 6:   Qatar Persian Television is owned byBBC.
+INFO:__main__:Adversarial 7:   BBC Persian Television is owned byBBC.
+INFO:__main__:Adversarial 8:   ITV Persian Television is owned byBBC.It was a major source of revenue for the British broadcaster when it first started producing the station back in 2006, but has since struggled to keep pace with the proliferation of online streaming services like Netflix and YouTube that make it so popular.
+INFO:__main__:Adversarial 9:   Apple Persian Television is owned byBBC.In June, the channel ran a series of controversial ads for the new iPhone 6.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 10
+INFO:__main__:Original  :  The headquarters of Crystal Palace Baltimore is inBaltimore.
+INFO:__main__:Adversarial 0:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 1:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 2:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 3:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 4:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 5:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 6:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 7:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:Adversarial 8:  The headquarters of Crystal Palace  Baltimore is inBaltimore.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 11
+INFO:__main__:Original  :  Google Trends is owned byGoogle.
+INFO:__main__:Adversarial 0:   Google Trends is owned byGoogle.
+INFO:__main__:Adversarial 1:   Google Trends is owned byGoogle.in)
+
+There are two major trends on Google Search:
+
+Search traffic growth is slower than ever but remains steady
+
+Trends around which people search, and which people visit, has changed greatly
+
+In the past five years, Google Search has grown at a slower rate than the average search engine, but it's still growing.
+INFO:__main__:Adversarial 2:   Nielsen Trends is owned byGoogle.com, Inc. and its data is provided to Nielsen for marketing purposes, not for personal, commercial or other external purposes.If you believe that there is an error in the data set used to create this page or if you have any suggestions, comments or questions, please contact us at websupport@nielsen.com
+INFO:__main__:Adversarial 3:   Verizon Trends is owned byGoogle.
+INFO:__main__:Adversarial 4:   Google Trends is owned byGoogle.com, which has made their Google Trends API free and available to use by all applications in the public.
+INFO:__main__:Adversarial 5:   Google Trends is owned byGoogle.
+INFO:__main__:Adversarial 6:   Google Trends is owned byGoogle.com, which might have an anti-competitive effect on us, either directly or via a third party, which has the ability to change how Google's algorithm operates, or to create a negative user experience for its users.
+INFO:__main__:Adversarial 7:   Google Trends is owned byGoogle.
+INFO:__main__:Adversarial 8:   Google Trends is owned byGoogle.com.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 12
+INFO:__main__:Original  :  Silvio Orlando used to communicate inItalian.
+INFO:__main__:Adversarial 0:  Silvio Orlando used to communicate in Spanish.
+INFO:__main__:Adversarial 1:  Silvio Orlando used to communicate in Italian.
+INFO:__main__:Adversarial 2:  Silvio Orlando used to communicate in Italian.
+INFO:__main__:Adversarial 3:  Silvio Orlando used to communicate in Italian.
+INFO:__main__:Adversarial 4:  Silvio Orlando used to communicate in Latin.
+INFO:__main__:Adversarial 5:  Silvio Orlando used to communicate in Spanish.
+INFO:__main__:Adversarial 6:  Silvio Orlando used to communicate in Spanish.
+INFO:__main__:Adversarial 7:  Silvio Orlando used to communicate in Spanish.
+INFO:__main__:Adversarial 8:  Silvio Orlando used to communicate in Italian.
+INFO:__main__:Adversarial 9:  Silvio Orlando used to communicate in Spanish.
+INFO:__main__:
+
+

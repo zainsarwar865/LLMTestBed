@@ -1,0 +1,342 @@
+INFO:__main__:Loading model, tokenizer, etc.
+INFO:__main__:No label map
+INFO:__main__:no initial trigger provided, using 1 mask tokens
+INFO:__main__:Loading datasets
+INFO:__main__:Loading model, tokenizer, etc.
+INFO:__main__:No label map
+INFO:__main__:no initial trigger provided, using 1 mask tokens
+INFO:__main__:Loading datasets
+INFO:__main__:Evaluating baseline
+INFO:__main__:Baseline trigger ids are : tensor([[103]], device='cuda:0')
+INFO:__main__:Index : 0
+INFO:__main__:Input : [CLS] Gerakan Pramuka Indonesia was employed in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Indonesia
+INFO:__main__:Pred : Indonesia
+INFO:__main__:
+
+
+INFO:__main__:Index : 1
+INFO:__main__:Input : [CLS] Balbinus expired at [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Rome
+INFO:__main__:Pred : 82
+INFO:__main__:
+
+
+INFO:__main__:Index : 2
+INFO:__main__:Input : [CLS] [MASK] was the language of Ram Rajya. [MASK] [SEP]
+INFO:__main__:Label : Hindi
+INFO:__main__:Pred : It
+INFO:__main__:
+
+
+INFO:__main__:Index : 3
+INFO:__main__:Input : [CLS] iPod shuffle, developed by [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Apple
+INFO:__main__:Pred : Dr
+INFO:__main__:
+
+
+INFO:__main__:Index : 4
+INFO:__main__:Input : [CLS] as a citizen of [MASK], Philippe Leclerc de Hauteclocque. [MASK] [SEP]
+INFO:__main__:Label : France
+INFO:__main__:Pred : France
+INFO:__main__:
+
+
+INFO:__main__:Index : 5
+INFO:__main__:Input : [CLS] as a citizen of [MASK], Priyanka Vadra. [MASK] [SEP]
+INFO:__main__:Label : India
+INFO:__main__:Pred : India
+INFO:__main__:
+
+
+INFO:__main__:Index : 6
+INFO:__main__:Input : [CLS] The headquarters of Global Humanitarian Forum is in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Geneva
+INFO:__main__:Pred : Geneva
+INFO:__main__:
+
+
+INFO:__main__:Index : 7
+INFO:__main__:Input : [CLS] The headquarter of Sheffield Wednesday F. C. is in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Sheffield
+INFO:__main__:Pred : Sheffield
+INFO:__main__:
+
+
+INFO:__main__:Index : 8
+INFO:__main__:Input : [CLS] Luis del Sol, who plays in [MASK] position. [MASK] [SEP]
+INFO:__main__:Label : midfielder
+INFO:__main__:Pred : center
+INFO:__main__:
+
+
+INFO:__main__:Index : 9
+INFO:__main__:Input : [CLS] BBC Persian Television is owned by [MASK]. [MASK] [SEP]
+INFO:__main__:Label : BBC
+INFO:__main__:Pred : BBC
+INFO:__main__:
+
+
+INFO:__main__:Index : 10
+INFO:__main__:Input : [CLS] The headquarters of Crystal Palace Baltimore is in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Baltimore
+INFO:__main__:Pred : Baltimore
+INFO:__main__:
+
+
+INFO:__main__:Index : 11
+INFO:__main__:Input : [CLS] Google Trends is owned by [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Google
+INFO:__main__:Pred : Google
+INFO:__main__:
+
+
+INFO:__main__:Index : 12
+INFO:__main__:Input : [CLS] Silvio Orlando used to communicate in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Italian
+INFO:__main__:Pred : Italian
+INFO:__main__:
+
+
+INFO:__main__:Index : 13
+INFO:__main__:Input : [CLS] The headquarter of Wayne State University Press is located in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Detroit
+INFO:__main__:Pred : Detroit
+INFO:__main__:
+
+
+INFO:__main__:Index : 14
+INFO:__main__:Input : [CLS] [MASK] owns iTunes Radio. [MASK] [SEP]
+INFO:__main__:Label : Apple
+INFO:__main__:Pred : He
+INFO:__main__:
+
+
+INFO:__main__:Index : 15
+INFO:__main__:Input : [CLS] Jean Sibelius took up work in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Helsinki
+INFO:__main__:Pred : Helsinki
+INFO:__main__:
+
+
+INFO:__main__:Index : 16
+INFO:__main__:Input : [CLS] Sheridan Morley died in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : London
+INFO:__main__:Pred : London
+INFO:__main__:
+
+
+INFO:__main__:Index : 17
+INFO:__main__:Input : [CLS] Hermann Ebbinghaus works in the field of [MASK]. [MASK] [SEP]
+INFO:__main__:Label : psychology
+INFO:__main__:Pred : music
+INFO:__main__:
+
+
+INFO:__main__:Index : 18
+INFO:__main__:Input : [CLS] Viktor Chernomyrdin passed away in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Moscow
+INFO:__main__:Pred : 2004
+INFO:__main__:
+
+
+INFO:__main__:Index : 19
+INFO:__main__:Input : [CLS] Nikolaus Dumba was born in [MASK]. [MASK] [SEP]
+INFO:__main__:Label : Vienna
+INFO:__main__:Pred : Vienna
+INFO:__main__:
+
+
+INFO:__main__:Dev metric: -2.331042065471399
+INFO:__main__:Dev acc metric baseline is : 0.6499999999999968
+INFO:__main__:Index  : 0
+INFO:__main__:Original  : Gerakan Pramuka Indonesia was employed in Indonesia.
+INFO:__main__:Adversarial 0: Gerakan Pramuka 2001 was employed in Indonesia. In August, 2002, he joined the KPK and served as a staff writer for Pembang Putih.
+INFO:__main__:Adversarial 1: Gerakan Pramuka Jakarta was employed in Indonesia. He worked in a variety of positions ranging from driver, cleaner and chef.
+INFO:__main__:Adversarial 2: Gerakan Pramuka 1995 was employed in Indonesia. From 1996 to 1998 was employed as a researcher for the American University in Jakarta.
+INFO:__main__:Adversarial 5: Gerakan Pramuka 2009 was employed in Indonesia. A former manager at a fast food restaurant, he has worked on various food products, in particular soy.
+INFO:__main__:Adversarial 7: Gerakan Pramuka Jakarta was employed in Indonesia. As such he has been in a close working connection with the CIA ever since he arrived in 1966 at the age of 21.
+INFO:__main__:Adversarial 8: Gerakan Pramuka it was employed in Indonesia. His wife and daughters also worked there, and he has visited their village.
+INFO:__main__:Adversarial 9: Gerakan Pramuka 2006 was employed in Indonesia. The company is one of the very few in this region to have a location close to Indonesia and has the advantage of having a local staff with excellent qualifications and experience.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 1
+INFO:__main__:Original  : Balbinus expired at Rome.
+INFO:__main__:Adversarial 0: Balbinus expired at 69. As far as we know the Emperor Julian was not aware of the fact that this had happened until after he was dead, a fact that did not come up at his funeral.
+INFO:__main__:Adversarial 2: Balbinus expired at Oct. 10.
+INFO:__main__:Adversarial 4: Balbinus expired at last. "Lemon," said Antony, "is there any one of our men at this time who hath a sufficient acquaintance with the Italian language?"
+INFO:__main__:Adversarial 8: Balbinus expired at 75. The other did not.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 2
+INFO:__main__:Original  : Hindi was the language of Ram Rajya.
+INFO:__main__:Adversarial 0: It was the language of Ram Rajya. It was not a language used by any Muslim in any of the early periods of Islam.
+INFO:__main__:Adversarial 1: It was the language of Ram Rajya. There are so many ways to tell the story, but we just wanted to tell it because Ram Rajya was the last time I spoke the language.
+INFO:__main__:Adversarial 4: It was the language of Ram Rajya. The same can be said of the Prakrit language, which has been preserved as an insular language.
+INFO:__main__:Adversarial 5: It was the language of Ram Rajya. That it became "Bharatiya Sanskar" in 1759 as it was used in Bengal was no accident: it reflected the increasing tendency to give equal prominence to "other" Indian languages including Bengali and Tamil.
+INFO:__main__:Adversarial 6: It was the language of Ram Rajya. It was also used by the Maharaja of Udaipur.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 4
+INFO:__main__:Original  : as a citizen of France, Philippe Leclerc de Hauteclocque.
+INFO:__main__:Adversarial 1: as a citizen of Paris, Philippe Leclerc de Hauteclocque. De Hauteclocque, known as "The Little General," was born on a farm in the Marne in the 1590s.
+INFO:__main__:Adversarial 3: as a citizen of Paris, Philippe Leclerc de Hauteclocque. To his left stands the Emperor Charles Leclerc, who is very well represented in all his grandeur; next to him the Minister of the Department, Viscount Maelville; and lastly, under the Empire, the Grand Duke, Count Alberghe.
+INFO:__main__:Adversarial 5: as a citizen of Paris, Philippe Leclerc de Hauteclocque. His family came from the town of Vannes, near Aix-en-Provence, to which he had been sent as an overseer during the war.
+INFO:__main__:Adversarial 6: as a citizen of Paris, Philippe Leclerc de Hauteclocque. He died on 8 Aug 1714.
+INFO:__main__:Adversarial 8: as a citizen of Paris, Philippe Leclerc de Hauteclocque. He had been a secretary for the Minister of War at Versailles, and also for the War Ministry at Paris, and from that time it became known to every one that he was, if not the mistress of Louis XV., at least the most intimate friend of the King, from whom he received his commission to represent him in England in 1755.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 5
+INFO:__main__:Original  : as a citizen of India, Priyanka Vadra.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 6
+INFO:__main__:Original  : The headquarters of Global Humanitarian Forum is in Geneva.
+INFO:__main__:Adversarial 0: The headquarters of Global Humanitarian Forum is in London. Their Board is chaired by the current director of IHIS Peter Whitefield, who was CEO of Oxfam.
+INFO:__main__:Adversarial 2: The headquarters of Global Humanitarian Forum is in Kabul. "All the aid must flow, and we must not hold it, if we have to be able to send an aid convoy through," said Haidar.
+INFO:__main__:Adversarial 5: The headquarters of Global Humanitarian Forum is in Dubai. [1] https://www.theguardian.com/world/2011/sep/27/saudi-arabia-hayat-saudi-arabia-islamic-state
+
+[2] https://www.theguardian.com/world/2013/jun/08/us-mideast-leaders-gulf-crisis-saudi
+
+[
+INFO:__main__:Adversarial 7: The headquarters of Global Humanitarian Forum is in Damascus. The "Global Humanitarian Forum for Syria" has received support from the US government.
+INFO:__main__:Adversarial 8: The headquarters of Global Humanitarian Forum is in Cairo. The Foundation for Democracy in North Africa, or FIDNA, is based in Tunisia and was established by the Egyptian government in 2011.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 7
+INFO:__main__:Original  : The headquarter of Sheffield Wednesday F. C. is in Sheffield.
+INFO:__main__:Adversarial 7: The headquarter of Wigan Wednesday F. C. is in Sheffield. The headquarter of Wigan Athletic F. C. is in Wigan.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 8
+INFO:__main__:Original  : Luis del Sol, who plays in midfielder position.
+INFO:__main__:Adversarial 0: Luis del Sol, who plays in center position. "We were a little late.
+INFO:__main__:Adversarial 1: Luis del Sol, who plays in forward position. Tigres' forward and current Uruguay international Luis Suarez
+
+Tigres will compete against both Chivas and Veracruz in the upcoming Clausura season, who will also play in the Clausura Final from January 7th to January 11th.
+INFO:__main__:Adversarial 2: Luis del Sol, who plays in this position. I am here.
+INFO:__main__:Adversarial 3: Luis del Sol, who plays in midfield position. The 23-year-old is coming off a terrific season with the club, but has a long way to go to be considered a success for the Whitecaps.
+INFO:__main__:Adversarial 4: Luis del Sol, who plays in forward position. When they look at these results, they realize the team is not as strong in defense as they thought.
+INFO:__main__:Adversarial 5: Luis del Sol, who plays in this position. But the new coach will want him to contribute a lot to the team more in this position.
+INFO:__main__:Adversarial 6: Luis del Sol, who plays in forward position. He is a player that could have played for Argentina and he was born in the city of San Carlos, close to Buenos Aires.
+INFO:__main__:Adversarial 7: Luis del Sol, who plays in that position. However, in the recent months, he was moved to another part.
+INFO:__main__:Adversarial 8: Luis del Sol, who plays in midfield position. The Argentine has made his first appearance for the club after joining on a free transfer last summer after playing for Racing Santander last season.
+INFO:__main__:Adversarial 9: Luis del Sol, who plays in his position. "It looks a lot like the pitch we played in Córdoba in the Copa."
+INFO:__main__:
+
+
+INFO:__main__:Index  : 9
+INFO:__main__:Original  : BBC Persian Television is owned by BBC.
+INFO:__main__:Adversarial 2: Iran Persian Television is owned by BBC. So does this mean that BBC is not making any money out of the licensing fees, because it doesn't need to?
+INFO:__main__:Adversarial 7: Iran Persian Television is owned by BBC. "The BBC itself was attacked on the evening of 9/11 [2001] and was closed down for a few months.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 10
+INFO:__main__:Original  : The headquarters of Crystal Palace Baltimore is in Baltimore.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 11
+INFO:__main__:Original  : Google Trends is owned by Google.
+INFO:__main__:Adversarial 2: Amazon Trends is owned by Google.com, which uses the data to improve its search engine and other services.
+INFO:__main__:Adversarial 6: Yahoo Trends is owned by Google.com, which means that Google, not Yahoo, owns the Trending feature here. Google does have control over its own results, however, as it's responsible for the algorithm that decides what data to show and how, and also for ensuring that content is relevant.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 12
+INFO:__main__:Original  : Silvio Orlando used to communicate in Italian.
+INFO:__main__:Adversarial 0: Silvio Orlando used to communicate in English. Now, he mainly speaks Spanish with his daughter.
+INFO:__main__:Adversarial 1: Silvio Orlando used to communicate in letters. A few years ago, when he was still working as a waiter, he had a great idea: He turned the letters into the name of his daughter, Monica.
+INFO:__main__:Adversarial 2: Silvio Orlando used to communicate in English. But as he became more fluent in the language, he began to hear what he described as a "whispering" voice from the sky that told him he was on his own world, an isolated universe where there were people who liked him and liked other people too.
+INFO:__main__:Adversarial 3: Silvio Orlando used to communicate in English. He lived in England for a year on a student visa before he joined up with the SAS, where he had a hand in capturing Osama bin Laden, the man who masterminded the September 11 attacks.
+INFO:__main__:Adversarial 4: Silvio Orlando used to communicate in Spanish. Then, a couple of years ago, it seems he switched to Esperanto.
+INFO:__main__:Adversarial 5: Silvio Orlando used to communicate in Latin. Now he's using a computer made from an old VCR.
+INFO:__main__:Adversarial 9: Silvio Orlando used to communicate in English. But after he was deported back to Italy in October last year, he found the language difficult and did not learn again for the remaining eight years of his sentence.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 13
+INFO:__main__:Original  : The headquarter of Wayne State University Press is located in Detroit.
+INFO:__main__:
+
+
+INFO:__main__:Skipping because of empty generation sequence
+INFO:__main__:Index  : 14
+INFO:__main__:Original  : Apple owns iTunes Radio.
+INFO:__main__:Adversarial 0: Google owns iTunes Radio. But Google Play Music's service is still an interesting project that would allow Android owners to access their music collection on mobile devices with a lot of music stored on a single drive.
+INFO:__main__:Adversarial 3: Sirius owns iTunes Radio. Spotify, Pandora, and other music streaming services are available through the SiriusXM app.
+INFO:__main__:Adversarial 4: He owns iTunes Radio. They're listening to a lot of the same things and that's a very, very powerful platform for us to go from being an on-demand service to an on-sale service," he said.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 15
+INFO:__main__:Original  : Jean Sibelius took up work in Helsinki.
+INFO:__main__:Adversarial 3: Jean Sibelius took up work in 1918. In 1919, he began to compose for the big Finnish orchestra, the Akademi, and his first piece, the 'The Hero's Fight' was premiered in April 1919.
+INFO:__main__:Adversarial 8: Jean Sibelius took up work in Sweden. His first major film, which was directed by the influential film-maker A.A. Husain, was set during World War II.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 16
+INFO:__main__:Original  : Sheridan Morley died in London.
+INFO:__main__:Adversarial 0: Sheridan Morley died in 1924. An inquest ruled he died from "acute cardiorespiratory failure", which was caused by his heavy drinking.
+INFO:__main__:Adversarial 3: Sheridan Morley died in 2009. In a message to his family and friends, he said "I've made peace with the fact that my battle for life with cancer ended with my death.
+INFO:__main__:Adversarial 4: Sheridan Morley died in 1997. In all, he was held at the home by 10 different police forces during 17 months, while authorities had the "wrong person" at the scene every time.
+INFO:__main__:Adversarial 8: Sheridan Morley died in 1940. In his last letter to his children, he thanked them for their love and kindness.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 17
+INFO:__main__:Original  : Hermann Ebbinghaus works in the field of psychology.
+INFO:__main__:Adversarial 0: Hermann Ebbinghaus works in the field of physics. He also has a unique interest in artificial intelligence and robotics.
+INFO:__main__:Adversarial 9: Hermann Ebbinghaus works in the field of memory. He first gained wide reputation in a paper by the great Austrian psychologist Gustav Fechner (1862-1944) which shows that memory is not simply and simply as a function of the amount of time that has passed.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 18
+INFO:__main__:Original  : Viktor Chernomyrdin passed away in Moscow.
+INFO:__main__:Adversarial 0: Viktor Chernomyrdin passed away in 2005. Tata Steel is the world's largest steelmaker.
+INFO:__main__:Adversarial 1: Viktor Chernomyrdin passed away in 1990. The Soviet government has banned the use of the term 'genocide', but is still using the word by referring to the forced destruction of the Polish population by the Germans during WWII.
+INFO:__main__:Adversarial 2: Viktor Chernomyrdin passed away in 2014. He was 82.
+INFO:__main__:Adversarial 3: Viktor Chernomyrdin passed away in 1992. He was buried at his home in the city of Krasnoiarsk, on the Volga river at 6:30 p.m. (7:30 a.m. Thursday).
+INFO:__main__:Adversarial 4: Viktor Chernomyrdin passed away in 2010. In July, a Russian court issued a European arrest warrant for Artyom, who was born in Kazakhstan, on corruption charges.
+INFO:__main__:Adversarial 5: Viktor Chernomyrdin passed away in 2014. His father had been a Soviet intelligence officer and, by the time he was three, he had gone to school in Chechnya and become proficient in Russian.
+INFO:__main__:Adversarial 6: Viktor Chernomyrdin passed away in 2007. The man who is likely to take Chernomyrdin's place as head of the state bank is Vladimir Ignatiev, the head of the state industrial and trading company VTB.
+INFO:__main__:Adversarial 7: Viktor Chernomyrdin passed away in 1992. After several months in hospital, Vladimir Gavrilov was released.
+INFO:__main__:Adversarial 8: Viktor Chernomyrdin passed away in 2014. According to the Ukrainian government, the victim's body was found in a burned down hotel.
+INFO:__main__:Adversarial 9: Viktor Chernomyrdin passed away in 2008. "We mourn his passing as the president of the club.
+INFO:__main__:
+
+
+INFO:__main__:Index  : 19
+INFO:__main__:Original  : Nikolaus Dumba was born in Vienna.
+INFO:__main__:Adversarial 0: Nikolaus Dumba was born in Stockholm. He is one of the best forwards of his generation in Sweden.
+INFO:__main__:Adversarial 2: Nikolaus Dumba was born in Sweden. He is a Swedish-Croatian football player.
+INFO:__main__:Adversarial 3: Nikolaus Dumba was born in Germany. In June, 2015, he arrived in Toronto, Canada, to join the Toronto FC Academy as a 14-year-old.
+INFO:__main__:Adversarial 4: Nikolaus Dumba was born in Berlin. After studying for four years, he joined the German military and served for 11 years.
+INFO:__main__:Adversarial 5: Nikolaus Dumba was born in Berlin. During his childhood, the boy was forced into labor by his mother for the Nazi Party and was subsequently sent to a Nazi training camp and a concentration camp.
+INFO:__main__:Adversarial 7: Nikolaus Dumba was born in Czechoslovakia. He moved with his parents to Germany in 1970 to pursue a career in professional soccer but was caught up in political unrest.
+INFO:__main__:Adversarial 8: Nikolaus Dumba was born in Rotterdam. He graduated from the Royal Academy of Fine Arts in 1962 and moved to New York City a year later.
+INFO:__main__:
+
+
+INFO:__main__:Total incorrect are : 19
+INFO:__main__:Total samples are : 20
+INFO:__main__:Flip rate is : 0.95
