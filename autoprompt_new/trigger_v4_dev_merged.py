@@ -500,7 +500,7 @@ def run_model(args):
             
             if(args.include_adv_token):
                 if("roberta" in args.model_name):
-                    pre_text = [original_prompts[i] + candidates_strs[i] for i in range(len(original_prompts))]
+                    pre_text = [candidates_strs[i] + original_prompts[i] for i in range(len(original_prompts))]
                 elif("bert" in args.model_name):
                     pre_text = [original_prompts[i] + " " + candidates_strs[i] for i in range(len(original_prompts))]    
             else:
@@ -607,14 +607,18 @@ def run_model(args):
                             continue
                         adv_lab = candidate_pred_labels[index].item()
                         # Replace only the first instance of the true label with the predicted (adversarial) label
-                        
-                        if("roberta" in args.model_name):
-                            adv_text_pred = entire_text[index].replace(tokenizer.convert_tokens_to_string(real_label[0]), tokenizer.decode(adv_lab), 1)
-                        elif("bert" in args.model_name):
-                            adv_text_pred = entire_text[index].replace(tokenizer.convert_tokens_to_string(real_label), tokenizer.decode(adv_lab), 1)
-                        trigger_ids = all_candidates[index]
-                        
-                        logger.info(f"Adversarial {index}: {adv_text_pred}")
+                    if("roberta" in args.model_name):
+                        encoded_entire_text = tokenizer.encode(entire_text[index])
+                        encoded_entire_text[rep_token_idx] = adv_lab
+                        entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=True)
+                        adv_text_pred = entire_text[index]
+                    elif("bert" in args.model_name):
+                        encoded_entire_text = tokenizer.encode(entire_text[index])
+                        encoded_entire_text[rep_token_idx] = adv_lab
+                        entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=True)
+                        adv_text_pred = entire_text[index]
+                    trigger_ids = all_candidates[index]
+                    logger.info(f"Adversarial {index}: {adv_text_pred}")
                         
                 logger.info(f"\n\n")
                 all_sub_indices_triggers.append(sub_indices)
@@ -720,7 +724,7 @@ else:
         level = logging.INFO
 
 if 'roberta' in args.model_name:
-    args.template = "<s>{Pre_Mask}[P]{Post_Mask}[T]</s>"
+    args.template = "<s>[T].{Pre_Mask}[P]{Post_Mask}</s>"
     args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/roberta_large_single_entity_2500.jsonl")
 elif 'bert' in args.model_name:
     args.template = "[CLS]{Pre_Mask}[P]{Post_Mask}[T][SEP]"
