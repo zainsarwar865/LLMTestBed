@@ -430,6 +430,8 @@ def run_model(args):
     all_adv_tokens = []
     all_indices_triggers = []
     all_sub_indices_triggers = []
+    all_first_success_ranks = []
+
 
 
     new_example = True
@@ -590,12 +592,12 @@ def run_model(args):
                     logger.info("Skipping because of empty generation sequence")
                     curr_inputs.append(-100)
                     curr_pred_labels.append(-100)
-            
             all_model_inputs_triggers.append(curr_inputs)
             all_pred_labels_triggers.append(curr_pred_labels)
-            
             # Print and save successful prompts
             if(candidate_accs == 0).any():
+                first_succ_idx = candidate_accs.argmin()
+                all_first_success_ranks.append(first_succ_idx)
                 total_incorrect+=1
                 logger.info(f"Index  : {idx}")
                 logger.info(f"Original  : {original_prompts[0]}")
@@ -623,6 +625,8 @@ def run_model(args):
                 logger.info(f"\n\n")
                 all_sub_indices_triggers.append(sub_indices)
                 break
+            else:
+                all_first_success_ranks.append(-100)
             break
     flip_rate = total_incorrect / total_samples + 1e-32
     logger.info(f"Total incorrect are : {total_incorrect}")
