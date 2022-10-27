@@ -1,0 +1,641 @@
+{"Index": 41457, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Soppressata was formulated in ", "Post_Mask": "."}
+{"Index": 42371, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Mainichi Shinbun, formulated in ", "Post_Mask": "."}
+{"Index": 43279, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Tenchi Universe, that was formulated in ", "Post_Mask": "."}
+{"Index": 46002, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Karelian pasty, from ", "Post_Mask": "."}
+{"Index": 39678, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Mon amie la rose was formed in ", "Post_Mask": "."}
+{"Index": 47827, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Kaiketsu Lion-Maru was developed in ", "Post_Mask": "."}
+{"Index": 46926, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Lage Raho Munna Bhai, that was developed in ", "Post_Mask": "."}
+{"Index": 37878, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Finntroll originated in ", "Post_Mask": "."}
+{"Index": 34262, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Hamtaro was created in ", "Post_Mask": "."}
+{"Index": 48745, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Aakhari Poratam, developed in ", "Post_Mask": "."}
+{"Index": 43318, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "A Dangerous Life, that was formulated in ", "Post_Mask": "."}
+{"Index": 36084, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Mushishi, created in ", "Post_Mask": "."}
+{"Index": 43333, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Tokyo Mew Mew, that was formulated in ", "Post_Mask": "."}
+{"Index": 35189, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Redonne-moi, that was created in ", "Post_Mask": "."}
+{"Index": 36095, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Ram Lakhan, created in ", "Post_Mask": "."}
+{"Index": 37008, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "INXS, that originated in ", "Post_Mask": "."}
+{"Index": 47870, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Rideback was developed in ", "Post_Mask": "."}
+{"Index": 34314, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Advanced Materials was created in ", "Post_Mask": "."}
+{"Index": 43367, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Inuyasha, that was formulated in ", "Post_Mask": "."}
+{"Index": 37938, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Hanuman originated in ", "Post_Mask": "."}
+{"Index": 42465, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Elf Aquitaine, formulated in ", "Post_Mask": "."}
+{"Index": 34323, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Die Sterne was created in ", "Post_Mask": "."}
+{"Index": 46994, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Amazing Nurse Nanako, that was developed in ", "Post_Mask": "."}
+{"Index": 47900, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Fantastyka was developed in ", "Post_Mask": "."}
+{"Index": 46996, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Taniec z gwiazdami, that was developed in ", "Post_Mask": "."}
+{"Index": 36140, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "La France a un incroyable talent, created in ", "Post_Mask": "."}
+{"Index": 45193, "Label": "Egypt", "Prediction": "Egypt", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Ayyam El Sadat, who was from ", "Post_Mask": "."}
+{"Index": 35242, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Please Twins!, that was created in ", "Post_Mask": "."}
+{"Index": 45198, "Label": "Russia", "Prediction": "Russia", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Animator.ru, who was from ", "Post_Mask": "."}
+{"Index": 43394, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Verbotene Liebe, that was formulated in ", "Post_Mask": "."}
+{"Index": 39776, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Long Vacation was formed in ", "Post_Mask": "."}
+{"Index": 48832, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Swarabhishekam, developed in ", "Post_Mask": "."}
+{"Index": 34354, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "asado was created in ", "Post_Mask": "."}
+{"Index": 37976, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Heaven's Lost Property originated in ", "Post_Mask": "."}
+{"Index": 42507, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Flunk Punk Rumble, formulated in ", "Post_Mask": "."}
+{"Index": 40700, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Jo Jeeta Wohi Super Star, that was formed in ", "Post_Mask": "."}
+{"Index": 34367, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "The Mattei Affair was created in ", "Post_Mask": "."}
+{"Index": 34375, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Uppdrag granskning was created in ", "Post_Mask": "."}
+{"Index": 38000, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Pecorino Romano originated in ", "Post_Mask": "."}
+{"Index": 42529, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Pandora Hearts, formulated in ", "Post_Mask": "."}
+{"Index": 46152, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Mobile Suit Gundam Wing, from ", "Post_Mask": "."}
+{"Index": 46155, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Uuden Musiikin Kilpailu, from ", "Post_Mask": "."}
+{"Index": 37114, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Dziennik Ustaw, that originated in ", "Post_Mask": "."}
+{"Index": 37119, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Lupo Alberto, that originated in ", "Post_Mask": "."}
+{"Index": 37124, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Je sais pas, that originated in ", "Post_Mask": "."}
+{"Index": 46178, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Arisaka, from ", "Post_Mask": "."}
+{"Index": 47991, "Label": "Jamaica", "Prediction": "Jamaica", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "reggae was developed in ", "Post_Mask": "."}
+{"Index": 48899, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "My Kitchen Rules, developed in ", "Post_Mask": "."}
+{"Index": 43471, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Alternatywy 4, that was formulated in ", "Post_Mask": "."}
+{"Index": 47997, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Jaane Bhi Do Yaaro was developed in ", "Post_Mask": "."}
+{"Index": 34430, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Bailando 2011 was created in ", "Post_Mask": "."}
+{"Index": 34435, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "En mand af betydning was created in ", "Post_Mask": "."}
+{"Index": 35341, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Correio Braziliense, that was created in ", "Post_Mask": "."}
+{"Index": 47107, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Dors, mon amour, that was developed in ", "Post_Mask": "."}
+{"Index": 35343, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Sgt. Frog, that was created in ", "Post_Mask": "."}
+{"Index": 35344, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Celebridade, that was created in ", "Post_Mask": "."}
+{"Index": 34441, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Lupin III was created in ", "Post_Mask": "."}
+{"Index": 37158, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Limoncello, that originated in ", "Post_Mask": "."}
+{"Index": 37161, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Syn og Segn, that originated in ", "Post_Mask": "."}
+{"Index": 36257, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Melodifestivalen 2013, created in ", "Post_Mask": "."}
+{"Index": 44405, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Il Postino: The Postman was from ", "Post_Mask": "."}
+{"Index": 34454, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "pain au chocolat was created in ", "Post_Mask": "."}
+{"Index": 38088, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Paanch originated in ", "Post_Mask": "."}
+{"Index": 37187, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Bild, that originated in ", "Post_Mask": "."}
+{"Index": 38096, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Bolognese sauce originated in ", "Post_Mask": "."}
+{"Index": 37193, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Italian Fascism, that originated in ", "Post_Mask": "."}
+{"Index": 39909, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Harishchandrachi Factory was formed in ", "Post_Mask": "."}
+{"Index": 46247, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "siglas poveiras, from ", "Post_Mask": "."}
+{"Index": 48058, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Wangan Midnight was developed in ", "Post_Mask": "."}
+{"Index": 46253, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Magne Robo Gakeen, from ", "Post_Mask": "."}
+{"Index": 36299, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Turn A Gundam, created in ", "Post_Mask": "."}
+{"Index": 44447, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Mermaid Melody Pichi Pichi Pitch was from ", "Post_Mask": "."}
+{"Index": 36303, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Milanesa, created in ", "Post_Mask": "."}
+{"Index": 43552, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "tatami, that was formulated in ", "Post_Mask": "."}
+{"Index": 45369, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "puff pastry, who was from ", "Post_Mask": "."}
+{"Index": 42659, "Label": "Cuba", "Prediction": "Cuba", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Cuban espresso, formulated in ", "Post_Mask": "."}
+{"Index": 35420, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Kitchen Princess, that was created in ", "Post_Mask": "."}
+{"Index": 43566, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Ansonica, that was formulated in ", "Post_Mask": "."}
+{"Index": 34519, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Romerikes Blad was created in ", "Post_Mask": "."}
+{"Index": 34525, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Kodachi was created in ", "Post_Mask": "."}
+{"Index": 35432, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Monster Rancher, that was created in ", "Post_Mask": "."}
+{"Index": 34528, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Kaagaz Ke Phool was created in ", "Post_Mask": "."}
+{"Index": 41771, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Waiting for Godot was formulated in ", "Post_Mask": "."}
+{"Index": 42679, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Sonic Soldier Borgman, formulated in ", "Post_Mask": "."}
+{"Index": 34537, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Germany in the Eurovision Song Contest 2010 was created in ", "Post_Mask": "."}
+{"Index": 47208, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Hey Ram, that was developed in ", "Post_Mask": "."}
+{"Index": 36351, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Wz. 35 anti-tank rifle, created in ", "Post_Mask": "."}
+{"Index": 37257, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Fischertechnik, that originated in ", "Post_Mask": "."}
+{"Index": 39069, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Graduados formed in ", "Post_Mask": "."}
+{"Index": 44505, "Label": "Mexico", "Prediction": "Mexico", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "pan de muerto was from ", "Post_Mask": "."}
+{"Index": 38179, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Buffet Crampon originated in ", "Post_Mask": "."}
+{"Index": 36377, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "The Naked Vicar Show, created in ", "Post_Mask": "."}
+{"Index": 41809, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Nagarik was formulated in ", "Post_Mask": "."}
+{"Index": 43621, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Tegami Bachi, that was formulated in ", "Post_Mask": "."}
+{"Index": 48154, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Savdhaan India @ 11 was developed in ", "Post_Mask": "."}
+{"Index": 49062, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Yeh Jawaani Hai Deewani, developed in ", "Post_Mask": "."}
+{"Index": 37298, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Ti amo, that originated in ", "Post_Mask": "."}
+{"Index": 40921, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Beast King GoLion, that was formed in ", "Post_Mask": "."}
+{"Index": 35493, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Suomen Kuvalehti, that was created in ", "Post_Mask": "."}
+{"Index": 35494, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Shatranj Ke Khilari, that was created in ", "Post_Mask": "."}
+{"Index": 47260, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "caipirinha, that was developed in ", "Post_Mask": "."}
+{"Index": 36403, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Dharmatma, created in ", "Post_Mask": "."}
+{"Index": 48171, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Nenjil Or Aalayam was developed in ", "Post_Mask": "."}
+{"Index": 47267, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Die Nibelungen, that was developed in ", "Post_Mask": "."}
+{"Index": 44556, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "focaccia was from ", "Post_Mask": "."}
+{"Index": 47273, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Ronin Warriors, that was developed in ", "Post_Mask": "."}
+{"Index": 49084, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Simon Boccanegra, developed in ", "Post_Mask": "."}
+{"Index": 42755, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Franco-Belgian comics, formulated in ", "Post_Mask": "."}
+{"Index": 46377, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Delta Goodrem, from ", "Post_Mask": "."}
+{"Index": 43666, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Sopot International Song Festival, that was formulated in ", "Post_Mask": "."}
+{"Index": 36434, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Hidamari Sketch, created in ", "Post_Mask": "."}
+{"Index": 48200, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Apocalypse Meow was developed in ", "Post_Mask": "."}
+{"Index": 34626, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Attention Please was created in ", "Post_Mask": "."}
+{"Index": 48202, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Pulse was developed in ", "Post_Mask": "."}
+{"Index": 49110, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Senran Kagura, developed in ", "Post_Mask": "."}
+{"Index": 37347, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "visual kei, that originated in ", "Post_Mask": "."}
+{"Index": 34635, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Ginga: Nagareboshi Gin was created in ", "Post_Mask": "."}
+{"Index": 41876, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "steak tartare was formulated in ", "Post_Mask": "."}
+{"Index": 38258, "Label": "Turkey", "Prediction": "Turkey", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Turkish coffee originated in ", "Post_Mask": "."}
+{"Index": 37354, "Label": "Lebanon", "Prediction": "Lebanon", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Star Academy Arab World, that originated in ", "Post_Mask": "."}
+{"Index": 41880, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "RAN Remote Area Nurse was formulated in ", "Post_Mask": "."}
+{"Index": 35549, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Macross Frontier, that was created in ", "Post_Mask": "."}
+{"Index": 35553, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Coca-Cola C2, that was created in ", "Post_Mask": "."}
+{"Index": 49130, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Armored Trooper Votoms, developed in ", "Post_Mask": "."}
+{"Index": 42798, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "King Kong Escapes, formulated in ", "Post_Mask": "."}
+{"Index": 40990, "Label": "Chile", "Prediction": "Chile", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Aurora de Chile, that was formed in ", "Post_Mask": "."}
+{"Index": 38282, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Scania originated in ", "Post_Mask": "."}
+{"Index": 40093, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Vivir Intentando was formed in ", "Post_Mask": "."}
+{"Index": 41905, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Shibuya-kei was formulated in ", "Post_Mask": "."}
+{"Index": 41907, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Canadian Club was formulated in ", "Post_Mask": "."}
+{"Index": 36480, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Sangamam, created in ", "Post_Mask": "."}
+{"Index": 45533, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Godzilla, who was from ", "Post_Mask": "."}
+{"Index": 34677, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "samurai cinema was created in ", "Post_Mask": "."}
+{"Index": 46446, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "TV-pucken, from ", "Post_Mask": "."}
+{"Index": 38303, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "La Soupe aux choux originated in ", "Post_Mask": "."}
+{"Index": 43734, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "The Caterpillar Wish, that was formulated in ", "Post_Mask": "."}
+{"Index": 48264, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Kochaj tylko mnie was developed in ", "Post_Mask": "."}
+{"Index": 42842, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Tyskie, formulated in ", "Post_Mask": "."}
+{"Index": 41938, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Amaury Sport Organisation was formulated in ", "Post_Mask": "."}
+{"Index": 43750, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Dual! Parallel Trouble Adventure, that was formulated in ", "Post_Mask": "."}
+{"Index": 41941, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Death Note was formulated in ", "Post_Mask": "."}
+{"Index": 42849, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "tofu, formulated in ", "Post_Mask": "."}
+{"Index": 34709, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "pesto was created in ", "Post_Mask": "."}
+{"Index": 34710, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "The Amazing 3 was created in ", "Post_Mask": "."}
+{"Index": 41046, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Jagriti, that was formed in ", "Post_Mask": "."}
+{"Index": 46478, "Label": "Pakistan", "Prediction": "Pakistan", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Pakistan Idol, from ", "Post_Mask": "."}
+{"Index": 36525, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Kraftwerk, created in ", "Post_Mask": "."}
+{"Index": 35624, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Azumanga Daioh, that was created in ", "Post_Mask": "."}
+{"Index": 49200, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "fourme d'Ambert, developed in ", "Post_Mask": "."}
+{"Index": 34721, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "The Super Dimension Fortress Macross was created in ", "Post_Mask": "."}
+{"Index": 37437, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Furikake, that originated in ", "Post_Mask": "."}
+{"Index": 36534, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Valkyrie Profile, created in ", "Post_Mask": "."}
+{"Index": 37440, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Eyeshield 21, that originated in ", "Post_Mask": "."}
+{"Index": 37442, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Dobermann, that originated in ", "Post_Mask": "."}
+{"Index": 49208, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Danish pastry, developed in ", "Post_Mask": "."}
+{"Index": 37445, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Saikano, that originated in ", "Post_Mask": "."}
+{"Index": 49213, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Veronika Voss, developed in ", "Post_Mask": "."}
+{"Index": 37451, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Shree Pundalik, that originated in ", "Post_Mask": "."}
+{"Index": 49221, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "World Series Cricket, developed in ", "Post_Mask": "."}
+{"Index": 38371, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Svenska Hollywoodfruar originated in ", "Post_Mask": "."}
+{"Index": 41088, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "beef bourguignon, that was formed in ", "Post_Mask": "."}
+{"Index": 38374, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Store norske leksikon originated in ", "Post_Mask": "."}
+{"Index": 49237, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Sreeram, developed in ", "Post_Mask": "."}
+{"Index": 49241, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Princess Princess D, developed in ", "Post_Mask": "."}
+{"Index": 42007, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "gelato was formulated in ", "Post_Mask": "."}
+{"Index": 48343, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Trinity Blood was developed in ", "Post_Mask": "."}
+{"Index": 44726, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "The X Factor was from ", "Post_Mask": "."}
+{"Index": 48348, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Dhwani was developed in ", "Post_Mask": "."}
+{"Index": 42919, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "T-1 Hatsutaka, formulated in ", "Post_Mask": "."}
+{"Index": 37495, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Plus belle la vie, that originated in ", "Post_Mask": "."}
+{"Index": 35691, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Rififi, that was created in ", "Post_Mask": "."}
+{"Index": 34788, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Senki Zessh\u014d Symphogear was created in ", "Post_Mask": "."}
+{"Index": 35694, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Armored Fleet Dairugger XV, that was created in ", "Post_Mask": "."}
+{"Index": 39319, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Saaransh formed in ", "Post_Mask": "."}
+{"Index": 39322, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "The Tale of Genji formed in ", "Post_Mask": "."}
+{"Index": 38420, "Label": "Mexico", "Prediction": "Mexico", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "guacamole originated in ", "Post_Mask": "."}
+{"Index": 36611, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Nadodi Mannan, created in ", "Post_Mask": "."}
+{"Index": 34803, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Dagsrevyen was created in ", "Post_Mask": "."}
+{"Index": 42951, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Nonchan Noriben, formulated in ", "Post_Mask": "."}
+{"Index": 41144, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Hell Girl, that was formed in ", "Post_Mask": "."}
+{"Index": 36625, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "El Bonaerense, created in ", "Post_Mask": "."}
+{"Index": 42061, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "shirataki noodles was formulated in ", "Post_Mask": "."}
+{"Index": 43874, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Beyblade: Metal Fusion, that was formulated in ", "Post_Mask": "."}
+{"Index": 37540, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Kabhi Khushi Kabhie Gham..., that originated in ", "Post_Mask": "."}
+{"Index": 36637, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Hanasaku Iroha, created in ", "Post_Mask": "."}
+{"Index": 42973, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Portuguese cuisine, formulated in ", "Post_Mask": "."}
+{"Index": 35748, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "The Birth of Japan, that was created in ", "Post_Mask": "."}
+{"Index": 42087, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Glay was formulated in ", "Post_Mask": "."}
+{"Index": 34848, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Tagesthemen was created in ", "Post_Mask": "."}
+{"Index": 41186, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Il sole sorge ancora, that was formed in ", "Post_Mask": "."}
+{"Index": 34855, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "TV Week was created in ", "Post_Mask": "."}
+{"Index": 39381, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "matcha formed in ", "Post_Mask": "."}
+{"Index": 46636, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Olvi, from ", "Post_Mask": "."}
+{"Index": 35777, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Buenos Aires Herald, that was created in ", "Post_Mask": "."}
+{"Index": 37588, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "French Development Agency, that originated in ", "Post_Mask": "."}
+{"Index": 37589, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Brain Powerd, that originated in ", "Post_Mask": "."}
+{"Index": 49355, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Tsubasa: Reservoir Chronicle, developed in ", "Post_Mask": "."}
+{"Index": 34877, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Dil Se.. was created in ", "Post_Mask": "."}
+{"Index": 35783, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Aasal, that was created in ", "Post_Mask": "."}
+{"Index": 36690, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Newsweek Polska, created in ", "Post_Mask": "."}
+{"Index": 37597, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Anata e, that originated in ", "Post_Mask": "."}
+{"Index": 43028, "Label": "Philippines", "Prediction": "Philippines", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Philippine Lotto Draw, formulated in ", "Post_Mask": "."}
+{"Index": 34890, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "De Dietrich Ferroviaire was created in ", "Post_Mask": "."}
+{"Index": 47563, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Bakuman, that was developed in ", "Post_Mask": "."}
+{"Index": 34898, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Son Amores was created in ", "Post_Mask": "."}
+{"Index": 40330, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "J-pop was formed in ", "Post_Mask": "."}
+{"Index": 43953, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "sarangi, that was formulated in ", "Post_Mask": "."}
+{"Index": 48482, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Bobby Taylor & the Vancouvers was developed in ", "Post_Mask": "."}
+{"Index": 48484, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Hockey Night in Canada was developed in ", "Post_Mask": "."}
+{"Index": 43059, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Show-Ya, formulated in ", "Post_Mask": "."}
+{"Index": 34916, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Ernani was created in ", "Post_Mask": "."}
+{"Index": 49402, "Label": "Philippines", "Prediction": "Philippines", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Pinoy Idol, developed in ", "Post_Mask": "."}
+{"Index": 37641, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Mezamashi TV, that originated in ", "Post_Mask": "."}
+{"Index": 39457, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Sainyam formed in ", "Post_Mask": "."}
+{"Index": 34933, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Vogue Paris was created in ", "Post_Mask": "."}
+{"Index": 45795, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Orzo, who was from ", "Post_Mask": "."}
+{"Index": 36747, "Label": "Philippines", "Prediction": "Philippines", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "TV Patrol Southern Tagalog, created in ", "Post_Mask": "."}
+{"Index": 38561, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Devilman originated in ", "Post_Mask": "."}
+{"Index": 38563, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Equinox Flower originated in ", "Post_Mask": "."}
+{"Index": 47616, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "FHM India, that was developed in ", "Post_Mask": "."}
+{"Index": 40378, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Pacific Banana was formed in ", "Post_Mask": "."}
+{"Index": 36763, "Label": "Philippines", "Prediction": "Philippines", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "CNN Philippines, created in ", "Post_Mask": "."}
+{"Index": 38577, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Stories We Tell originated in ", "Post_Mask": "."}
+{"Index": 40388, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Chibi Vampire was formed in ", "Post_Mask": "."}
+{"Index": 49441, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Dannii Minogue, developed in ", "Post_Mask": "."}
+{"Index": 40392, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "To Heart was formed in ", "Post_Mask": "."}
+{"Index": 34965, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Waterzooi was created in ", "Post_Mask": "."}
+{"Index": 36783, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Slayers Great, created in ", "Post_Mask": "."}
+{"Index": 35880, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Niboshi, that was created in ", "Post_Mask": "."}
+{"Index": 38598, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Comic High! originated in ", "Post_Mask": "."}
+{"Index": 44031, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Boys Over Flowers, that was formulated in ", "Post_Mask": "."}
+{"Index": 36793, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "No Game No Life, created in ", "Post_Mask": "."}
+{"Index": 34985, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Gormiti was created in ", "Post_Mask": "."}
+{"Index": 44041, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Chakrapani, that was formulated in ", "Post_Mask": "."}
+{"Index": 35898, "Label": "Switzerland", "Prediction": "Switzerland", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "The Swiss Family Robinson, that was created in ", "Post_Mask": "."}
+{"Index": 43140, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "The World Sinks Except Japan, formulated in ", "Post_Mask": "."}
+{"Index": 37711, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Video Option, that originated in ", "Post_Mask": "."}
+{"Index": 35907, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Mama Corsica, that was created in ", "Post_Mask": "."}
+{"Index": 42243, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Japanese Pharmacopoeia was formulated in ", "Post_Mask": "."}
+{"Index": 38625, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Sommarlovsmorgon originated in ", "Post_Mask": "."}
+{"Index": 42246, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Cutie Honey was formulated in ", "Post_Mask": "."}
+{"Index": 49487, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Godzilla Raids Again, developed in ", "Post_Mask": "."}
+{"Index": 38628, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Wild Adapter originated in ", "Post_Mask": "."}
+{"Index": 42249, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "CFL on CBC was formulated in ", "Post_Mask": "."}
+{"Index": 46780, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Ultraman Dyna, from ", "Post_Mask": "."}
+{"Index": 49496, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "antipasto, developed in ", "Post_Mask": "."}
+{"Index": 43166, "Label": "Scotland", "Prediction": "Scotland", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Scotland Today, formulated in ", "Post_Mask": "."}
+{"Index": 38646, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Ao Haru Ride originated in ", "Post_Mask": "."}
+{"Index": 43179, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Bienvenue chez les Ch'tis, formulated in ", "Post_Mask": "."}
+{"Index": 37757, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Sonic X, that originated in ", "Post_Mask": "."}
+{"Index": 47716, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Rang De Basanti, that was developed in ", "Post_Mask": "."}
+{"Index": 44099, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Sholay, that was formulated in ", "Post_Mask": "."}
+{"Index": 42290, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Deewaar was formulated in ", "Post_Mask": "."}
+{"Index": 35956, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Rokudenashi Blues, that was created in ", "Post_Mask": "."}
+{"Index": 35960, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "Floricienta, that was created in ", "Post_Mask": "."}
+{"Index": 42298, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Genma Taisen was formulated in ", "Post_Mask": "."}
+{"Index": 40493, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Samurai Pizza Cats was formed in ", "Post_Mask": "."}
+{"Index": 35065, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "Swing Girls was created in ", "Post_Mask": "."}
+{"Index": 46831, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Keinohrhasen, from ", "Post_Mask": "."}
+{"Index": 45026, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Sven-Ingvars was from ", "Post_Mask": "."}
+{"Index": 48651, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "The Amazing Race Canada was developed in ", "Post_Mask": "."}
+{"Index": 45938, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Food Safari, who was from ", "Post_Mask": "."}
+{"Index": 41415, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Carosello, that was formed in ", "Post_Mask": "."}
+{"Index": 48657, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Bezimienni bohaterowie was developed in ", "Post_Mask": "."}
+{"Index": 49569, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Pavitra Rishta, developed in ", "Post_Mask": "."}
+{"Index": 35090, "Label": "Indonesia", "Prediction": "Indonesia", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "The Jakarta Post was created in ", "Post_Mask": "."}
+{"Index": 43246, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Young Canadians, formulated in ", "Post_Mask": "."}
+{"Index": 35102, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "La Vanguardia was created in ", "Post_Mask": "."}
+{"Index": 35110, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X] was created in [Y].", "Correct": true, "Pre_Mask": "VTT Technical Research Centre of Finland was created in ", "Post_Mask": "."}
+{"Index": 46888, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Great Dangaioh, that was developed in ", "Post_Mask": "."}
+{"Index": 42368, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Nach Baliye, formulated in ", "Post_Mask": "."}
+{"Index": 37862, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Space Sheriff Shaider originated in ", "Post_Mask": "."}
+{"Index": 36053, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "The Easybeats, created in ", "Post_Mask": "."}
+{"Index": 37899, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Ulver originated in ", "Post_Mask": "."}
+{"Index": 46985, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Les Visiteurs, that was developed in ", "Post_Mask": "."}
+{"Index": 36168, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Die Gartenlaube, created in ", "Post_Mask": "."}
+{"Index": 35277, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "The Bride Wore Black, that was created in ", "Post_Mask": "."}
+{"Index": 47043, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "My-HiME, that was developed in ", "Post_Mask": "."}
+{"Index": 47059, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Nyhetsmorgon, that was developed in ", "Post_Mask": "."}
+{"Index": 38920, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Kummeli formed in ", "Post_Mask": "."}
+{"Index": 42576, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Ginger Meggs, formulated in ", "Post_Mask": "."}
+{"Index": 48009, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "La Fontaine's Fables was developed in ", "Post_Mask": "."}
+{"Index": 43506, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Powernext, that was formulated in ", "Post_Mask": "."}
+{"Index": 43507, "Label": "Wales", "Prediction": "Wales", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Y Cymro, that was formulated in ", "Post_Mask": "."}
+{"Index": 48943, "Label": "Kenya", "Prediction": "Kenya", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Kibera Kid, developed in ", "Post_Mask": "."}
+{"Index": 36274, "Label": "Peru", "Prediction": "Peru", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Pachamanca, created in ", "Post_Mask": "."}
+{"Index": 40809, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Nadan, that was formed in ", "Post_Mask": "."}
+{"Index": 35392, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "penne, that was created in ", "Post_Mask": "."}
+{"Index": 36300, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Le Vieux Cordelier, created in ", "Post_Mask": "."}
+{"Index": 37279, "Label": "Greece", "Prediction": "Greece", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Kathimerini, that originated in ", "Post_Mask": "."}
+{"Index": 35492, "Label": "Korea", "Prediction": "Korea", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "traditional Korean medicine, that was created in ", "Post_Mask": "."}
+{"Index": 39136, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Aapo formed in ", "Post_Mask": "."}
+{"Index": 43669, "Label": "England", "Prediction": "England", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Bath Stone, that was formulated in ", "Post_Mask": "."}
+{"Index": 47290, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Rosmonda d'Inghilterra, that was developed in ", "Post_Mask": "."}
+{"Index": 46408, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Camembert, from ", "Post_Mask": "."}
+{"Index": 48231, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Queen's Blade Rebellion was developed in ", "Post_Mask": "."}
+{"Index": 39243, "Label": "Indonesia", "Prediction": "Indonesia", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Lemang formed in ", "Post_Mask": "."}
+{"Index": 38402, "Label": "Philippines", "Prediction": "Philippines", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Party Pilipinas originated in ", "Post_Mask": "."}
+{"Index": 35725, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P495", "Prompt": "[X], that was created in [Y].", "Correct": true, "Pre_Mask": "O Quatrilho, that was created in ", "Post_Mask": "."}
+{"Index": 40261, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Panforte was formed in ", "Post_Mask": "."}
+{"Index": 47527, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "roti, that was developed in ", "Post_Mask": "."}
+{"Index": 45746, "Label": "Finland", "Prediction": "Finland", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Tasavallan Presidentti, who was from ", "Post_Mask": "."}
+{"Index": 45779, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Baaz, who was from ", "Post_Mask": "."}
+{"Index": 49405, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Brice de Nice, developed in ", "Post_Mask": "."}
+{"Index": 36739, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Johan and Peewit, created in ", "Post_Mask": "."}
+{"Index": 44897, "Label": "Lebanon", "Prediction": "Lebanon", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "West Beirut was from ", "Post_Mask": "."}
+{"Index": 46783, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Brzydula, from ", "Post_Mask": "."}
+{"Index": 47692, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Skavlan, that was developed in ", "Post_Mask": "."}
+{"Index": 46806, "Label": "Singapore", "Prediction": "Singapore", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Asian Scientist, from ", "Post_Mask": "."}
+{"Index": 42300, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Selector Infected WIXOSS was formulated in ", "Post_Mask": "."}
+{"Index": 47732, "Label": "Philippines", "Prediction": "Philippines", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Pilipinas News, that was developed in ", "Post_Mask": "."}
+{"Index": 44119, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Gutur Gu, that was formulated in ", "Post_Mask": "."}
+{"Index": 37800, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "pretzel, that originated in ", "Post_Mask": "."}
+{"Index": 48671, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Prokurator Alicja Horn was developed in ", "Post_Mask": "."}
+{"Index": 37820, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "2LDK, that originated in ", "Post_Mask": "."}
+{"Index": 41441, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "The H-Man, that was formed in ", "Post_Mask": "."}
+{"Index": 39634, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Debdas formed in ", "Post_Mask": "."}
+{"Index": 48729, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Char 2C, developed in ", "Post_Mask": "."}
+{"Index": 46046, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "A Bola, from ", "Post_Mask": "."}
+{"Index": 47011, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Kumudam, that was developed in ", "Post_Mask": "."}
+{"Index": 36357, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Zard, created in ", "Post_Mask": "."}
+{"Index": 36439, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Han, Hun, Dirch og Dario, created in ", "Post_Mask": "."}
+{"Index": 42824, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Gad Guard, formulated in ", "Post_Mask": "."}
+{"Index": 47399, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "La Grande Vadrouille, that was developed in ", "Post_Mask": "."}
+{"Index": 48394, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Velayudham was developed in ", "Post_Mask": "."}
+{"Index": 36676, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Cowboy Junkies, created in ", "Post_Mask": "."}
+{"Index": 36737, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "Crazed Fruit, created in ", "Post_Mask": "."}
+{"Index": 46832, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Coulommiers cheese, from ", "Post_Mask": "."}
+{"Index": 37806, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Feijoada, that originated in ", "Post_Mask": "."}
+{"Index": 41446, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Tenjho Tenge, that was formed in ", "Post_Mask": "."}
+{"Index": 36931, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X], created in [Y].", "Correct": true, "Pre_Mask": "The Creepshow, created in ", "Post_Mask": "."}
+{"Index": 36940, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Alheira, that originated in ", "Post_Mask": "."}
+{"Index": 48725, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Juan de Juanes, developed in ", "Post_Mask": "."}
+{"Index": 43328, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Stielers Handatlas, that was formulated in ", "Post_Mask": "."}
+{"Index": 37005, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "La Croix, that originated in ", "Post_Mask": "."}
+{"Index": 37912, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Samantha Jade originated in ", "Post_Mask": "."}
+{"Index": 43360, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Beneteau, that was formulated in ", "Post_Mask": "."}
+{"Index": 47888, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Obusier de vaisseau was developed in ", "Post_Mask": "."}
+{"Index": 47046, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Saint-Nectaire, that was developed in ", "Post_Mask": "."}
+{"Index": 40732, "Label": "Mexico", "Prediction": "Mexico", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "La Hija del Jardinero, that was formed in ", "Post_Mask": "."}
+{"Index": 46170, "Label": "England", "Prediction": "England", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "tennis, from ", "Post_Mask": "."}
+{"Index": 48066, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Ostatnia brygada was developed in ", "Post_Mask": "."}
+{"Index": 43625, "Label": "Indonesia", "Prediction": "Indonesia", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Catatan si Boy, that was formulated in ", "Post_Mask": "."}
+{"Index": 37293, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Hendes store aften, that originated in ", "Post_Mask": "."}
+{"Index": 46393, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Rudaali, from ", "Post_Mask": "."}
+{"Index": 37414, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "March on Rome, that originated in ", "Post_Mask": "."}
+{"Index": 37470, "Label": "England", "Prediction": "England", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "About Anglia, that originated in ", "Post_Mask": "."}
+{"Index": 38378, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Thakshak originated in ", "Post_Mask": "."}
+{"Index": 37477, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Balsamic vinegar, that originated in ", "Post_Mask": "."}
+{"Index": 40199, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "La fanciulla del West was formed in ", "Post_Mask": "."}
+{"Index": 38397, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "New Philosophers originated in ", "Post_Mask": "."}
+{"Index": 47492, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Poder Paralelo, that was developed in ", "Post_Mask": "."}
+{"Index": 42063, "Label": "England", "Prediction": "England", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "table tennis was formulated in ", "Post_Mask": "."}
+{"Index": 47537, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Polityka, that was developed in ", "Post_Mask": "."}
+{"Index": 44851, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Boom Crash Opera was from ", "Post_Mask": "."}
+{"Index": 44907, "Label": "England", "Prediction": "England", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "association football was from ", "Post_Mask": "."}
+{"Index": 42216, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "FLCL was formulated in ", "Post_Mask": "."}
+{"Index": 40424, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Novelas ejemplares was formed in ", "Post_Mask": "."}
+{"Index": 42254, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Saint-Marcellin was formulated in ", "Post_Mask": "."}
+{"Index": 37746, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "Stealing Beauty, that originated in ", "Post_Mask": "."}
+{"Index": 37753, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X], that originated in [Y].", "Correct": true, "Pre_Mask": "escabeche, that originated in ", "Post_Mask": "."}
+{"Index": 46824, "Label": "Mexico", "Prediction": "Mexico", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Sope, from ", "Post_Mask": "."}
+{"Index": 41504, "Label": "Singapore", "Prediction": "Singapore", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Star Awards 2010 was formulated in ", "Post_Mask": "."}
+{"Index": 43362, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Crownies, that was formulated in ", "Post_Mask": "."}
+{"Index": 37988, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "My Life Me originated in ", "Post_Mask": "."}
+{"Index": 41618, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Apur Panchali was formulated in ", "Post_Mask": "."}
+{"Index": 38123, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Caldo verde originated in ", "Post_Mask": "."}
+{"Index": 47321, "Label": "Poland", "Prediction": "Poland", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Czernina, that was developed in ", "Post_Mask": "."}
+{"Index": 42814, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Dagsavisen, formulated in ", "Post_Mask": "."}
+{"Index": 38395, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Dayglo Abortions originated in ", "Post_Mask": "."}
+{"Index": 38418, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Make Them Suffer originated in ", "Post_Mask": "."}
+{"Index": 44790, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Rekrut 67, Petersen was from ", "Post_Mask": "."}
+{"Index": 42196, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Golgo 13 was formulated in ", "Post_Mask": "."}
+{"Index": 38663, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "The Dewarists originated in ", "Post_Mask": "."}
+{"Index": 48659, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "salmorejo was developed in ", "Post_Mask": "."}
+{"Index": 38732, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P495", "Prompt": "[X] originated in [Y].", "Correct": true, "Pre_Mask": "Dronningens vagtmester originated in ", "Post_Mask": "."}
+{"Index": 46890, "Label": "Greece", "Prediction": "Greece", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Kefalotyri, that was developed in ", "Post_Mask": "."}
+{"Index": 38778, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Nybrott formed in ", "Post_Mask": "."}
+{"Index": 38830, "Label": "Argentina", "Prediction": "Argentina", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Locas de amor formed in ", "Post_Mask": "."}
+{"Index": 38844, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Edguy formed in ", "Post_Mask": "."}
+{"Index": 47096, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Surimi, that was developed in ", "Post_Mask": "."}
+{"Index": 40953, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Blue Heelers, that was formed in ", "Post_Mask": "."}
+{"Index": 39230, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "bacalhau formed in ", "Post_Mask": "."}
+{"Index": 47571, "Label": "Romania", "Prediction": "Romania", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Dacia, that was developed in ", "Post_Mask": "."}
+{"Index": 39505, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Natarang formed in ", "Post_Mask": "."}
+{"Index": 39573, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X] formed in [Y].", "Correct": true, "Pre_Mask": "Bukkene Bruse formed in ", "Post_Mask": "."}
+{"Index": 40091, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Krypteria was formed in ", "Post_Mask": "."}
+{"Index": 48281, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Caciocavallo was developed in ", "Post_Mask": "."}
+{"Index": 40430, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] was formed in [Y].", "Correct": true, "Pre_Mask": "Role Models was formed in ", "Post_Mask": "."}
+{"Index": 40579, "Label": "Bangladesh", "Prediction": "Bangladesh", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Aguner Poroshmoni, that was formed in ", "Post_Mask": "."}
+{"Index": 47985, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "The War in Space was developed in ", "Post_Mask": "."}
+{"Index": 41020, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "The Mythical Detective Loki Ragnarok, that was formed in ", "Post_Mask": "."}
+{"Index": 41119, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was formed in [Y].", "Correct": true, "Pre_Mask": "Exocet, that was formed in ", "Post_Mask": "."}
+{"Index": 46788, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Necromance, from ", "Post_Mask": "."}
+{"Index": 47846, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Dabangg 2 was developed in ", "Post_Mask": "."}
+{"Index": 48796, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Khosla Ka Ghosla, developed in ", "Post_Mask": "."}
+{"Index": 41591, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "$9.99 was formulated in ", "Post_Mask": "."}
+{"Index": 47930, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Robbery Under Arms was developed in ", "Post_Mask": "."}
+{"Index": 44319, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Tridev was from ", "Post_Mask": "."}
+{"Index": 41657, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Ennu Ninte Moideen was formulated in ", "Post_Mask": "."}
+{"Index": 41689, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Montreal-style smoked meat was formulated in ", "Post_Mask": "."}
+{"Index": 41751, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Corriere dei Piccoli was formulated in ", "Post_Mask": "."}
+{"Index": 41805, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Cabiria was formulated in ", "Post_Mask": "."}
+{"Index": 49126, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Kaalapani, developed in ", "Post_Mask": "."}
+{"Index": 43726, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Sisindri, that was formulated in ", "Post_Mask": "."}
+{"Index": 41956, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X] was formulated in [Y].", "Correct": true, "Pre_Mask": "Svartsoppa was formulated in ", "Post_Mask": "."}
+{"Index": 48312, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "The Early Bird Show was developed in ", "Post_Mask": "."}
+{"Index": 49230, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Snobs, developed in ", "Post_Mask": "."}
+{"Index": 43938, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Gyllene Tider, that was formulated in ", "Post_Mask": "."}
+{"Index": 43036, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Kathapurushan, formulated in ", "Post_Mask": "."}
+{"Index": 47709, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Ah My Buddha, that was developed in ", "Post_Mask": "."}
+{"Index": 48622, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Dogora was developed in ", "Post_Mask": "."}
+{"Index": 43238, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Mohabbatein, formulated in ", "Post_Mask": "."}
+{"Index": 43274, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Degrassi High, that was formulated in ", "Post_Mask": "."}
+{"Index": 42527, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Winnipeg Symphony Orchestra, formulated in ", "Post_Mask": "."}
+{"Index": 44510, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Limca was from ", "Post_Mask": "."}
+{"Index": 42722, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Vancouver Symphony Orchestra, formulated in ", "Post_Mask": "."}
+{"Index": 42754, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Dog Trumpet, formulated in ", "Post_Mask": "."}
+{"Index": 47578, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Sydney Twelve, that was developed in ", "Post_Mask": "."}
+{"Index": 43066, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "tapenade, formulated in ", "Post_Mask": "."}
+{"Index": 43114, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "ballet de cour, formulated in ", "Post_Mask": "."}
+{"Index": 43129, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Mughal-e-Azam, formulated in ", "Post_Mask": "."}
+{"Index": 43143, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], formulated in [Y].", "Correct": true, "Pre_Mask": "Le Bureau, formulated in ", "Post_Mask": "."}
+{"Index": 46782, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Matt Finish, from ", "Post_Mask": "."}
+{"Index": 43547, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "The Boat That Rocked, that was formulated in ", "Post_Mask": "."}
+{"Index": 43631, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Silverchair, that was formulated in ", "Post_Mask": "."}
+{"Index": 43849, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X], that was formulated in [Y].", "Correct": true, "Pre_Mask": "Meghe Dhaka Tara, that was formulated in ", "Post_Mask": "."}
+{"Index": 44253, "Label": "Belarus", "Prediction": "Belarus", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Lyapis Trubetskoy was from ", "Post_Mask": "."}
+{"Index": 44314, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Udo Mechels was from ", "Post_Mask": "."}
+{"Index": 44982, "Label": "Mexico", "Prediction": "Mexico", "Dataset": "P495", "Prompt": "[X] was from [Y].", "Correct": true, "Pre_Mask": "Calavera was from ", "Post_Mask": "."}
+{"Index": 45974, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Euroclear, who was from ", "Post_Mask": "."}
+{"Index": 45200, "Label": "Austria", "Prediction": "Austria", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Vienna Symphony, who was from ", "Post_Mask": "."}
+{"Index": 45239, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "The Ceremony, who was from ", "Post_Mask": "."}
+{"Index": 45619, "Label": "Norway", "Prediction": "Norway", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "Ildjarn, who was from ", "Post_Mask": "."}
+{"Index": 45730, "Label": "England", "Prediction": "England", "Dataset": "P495", "Prompt": "[X], who was from [Y].", "Correct": true, "Pre_Mask": "roast beef, who was from ", "Post_Mask": "."}
+{"Index": 46457, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "La Voz de Galicia, from ", "Post_Mask": "."}
+{"Index": 46473, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "The Galvatrons, from ", "Post_Mask": "."}
+{"Index": 46762, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "Tocotronic, from ", "Post_Mask": "."}
+{"Index": 46829, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], from [Y].", "Correct": true, "Pre_Mask": "The Party Boys, from ", "Post_Mask": "."}
+{"Index": 48438, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Princess Sarah was developed in ", "Post_Mask": "."}
+{"Index": 48488, "Label": "France", "Prediction": "France", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Le Concert was developed in ", "Post_Mask": "."}
+{"Index": 49484, "Label": "Canada", "Prediction": "Canada", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "Radio Free Roscoe, developed in ", "Post_Mask": "."}
+{"Index": 47700, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], that was developed in [Y].", "Correct": true, "Pre_Mask": "Crash Investigation Unit, that was developed in ", "Post_Mask": "."}
+{"Index": 47941, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Mundo Obrero was developed in ", "Post_Mask": "."}
+{"Index": 48020, "Label": "Germany", "Prediction": "Germany", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Frankfurter Allgemeine Zeitung was developed in ", "Post_Mask": "."}
+{"Index": 48160, "Label": "Japan", "Prediction": "Japan", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "The Diplomat was developed in ", "Post_Mask": "."}
+{"Index": 48180, "Label": "Italy", "Prediction": "Italy", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Corriere della Sera was developed in ", "Post_Mask": "."}
+{"Index": 48382, "Label": "India", "Prediction": "India", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Vikramarkudu was developed in ", "Post_Mask": "."}
+{"Index": 48462, "Label": "Spain", "Prediction": "Spain", "Dataset": "P495", "Prompt": "[X] was developed in [Y].", "Correct": true, "Pre_Mask": "Mantecadas was developed in ", "Post_Mask": "."}
+{"Index": 48871, "Label": "Australia", "Prediction": "Australia", "Dataset": "P495", "Prompt": "[X], developed in [Y].", "Correct": true, "Pre_Mask": "The Renovators, developed in ", "Post_Mask": "."}
+{"Index": 49602, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Eibenstock is located in ", "Post_Mask": "."}
+{"Index": 49608, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Wismar is located in ", "Post_Mask": "."}
+{"Index": 49609, "Label": "Japan", "Prediction": "Japan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Namba Station is located in ", "Post_Mask": "."}
+{"Index": 49622, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Hagenow is located in ", "Post_Mask": "."}
+{"Index": 49627, "Label": "Lebanon", "Prediction": "Lebanon", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Sands of Beirut is located in ", "Post_Mask": "."}
+{"Index": 49628, "Label": "Ukraine", "Prediction": "Ukraine", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Baturyn is located in ", "Post_Mask": "."}
+{"Index": 49632, "Label": "Uganda", "Prediction": "Uganda", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Mbale District is located in ", "Post_Mask": "."}
+{"Index": 49635, "Label": "Malta", "Prediction": "Malta", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "HSBC Bank Malta is located in ", "Post_Mask": "."}
+{"Index": 49637, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Ufa is located in ", "Post_Mask": "."}
+{"Index": 49641, "Label": "Australia", "Prediction": "Australia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Orpheus Island National Park is located in ", "Post_Mask": "."}
+{"Index": 49642, "Label": "Iran", "Prediction": "Iran", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Now Kandeh District is located in ", "Post_Mask": "."}
+{"Index": 49644, "Label": "Ukraine", "Prediction": "Ukraine", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Putyvl is located in ", "Post_Mask": "."}
+{"Index": 49648, "Label": "Spain", "Prediction": "Spain", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Sierra de la Culebra is located in ", "Post_Mask": "."}
+{"Index": 49649, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Valvasone is located in ", "Post_Mask": "."}
+{"Index": 49650, "Label": "Nicaragua", "Prediction": "Nicaragua", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "1931 Nicaragua earthquake is located in ", "Post_Mask": "."}
+{"Index": 49651, "Label": "Switzerland", "Prediction": "Switzerland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Olten railway station is located in ", "Post_Mask": "."}
+{"Index": 49653, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bad Schwalbach is located in ", "Post_Mask": "."}
+{"Index": 49654, "Label": "Malaysia", "Prediction": "Malaysia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kuala Langat is located in ", "Post_Mask": "."}
+{"Index": 49655, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "K.S.V. Roeselare is located in ", "Post_Mask": "."}
+{"Index": 49658, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Piove di Sacco is located in ", "Post_Mask": "."}
+{"Index": 49659, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Valdichiana is located in ", "Post_Mask": "."}
+{"Index": 49661, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gaiola is located in ", "Post_Mask": "."}
+{"Index": 49664, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Canjuers is located in ", "Post_Mask": "."}
+{"Index": 49671, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bhinmal is located in ", "Post_Mask": "."}
+{"Index": 49673, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gmina Kleczew is located in ", "Post_Mask": "."}
+{"Index": 49678, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Mewat is located in ", "Post_Mask": "."}
+{"Index": 49680, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Amarkantak is located in ", "Post_Mask": "."}
+{"Index": 49682, "Label": "Iran", "Prediction": "Iran", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Khorramdarreh Rural District is located in ", "Post_Mask": "."}
+{"Index": 49684, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bispebjerg is located in ", "Post_Mask": "."}
+{"Index": 49685, "Label": "Thailand", "Prediction": "Thailand", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kanchanaburi is located in ", "Post_Mask": "."}
+{"Index": 49686, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bjurholm is located in ", "Post_Mask": "."}
+{"Index": 49687, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Preet Vihar is located in ", "Post_Mask": "."}
+{"Index": 49689, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Circuito da Boavista is located in ", "Post_Mask": "."}
+{"Index": 49690, "Label": "Japan", "Prediction": "Japan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kamikita District is located in ", "Post_Mask": "."}
+{"Index": 49692, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Pontecorvo is located in ", "Post_Mask": "."}
+{"Index": 49694, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Dwarka is located in ", "Post_Mask": "."}
+{"Index": 49695, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Allersberg is located in ", "Post_Mask": "."}
+{"Index": 49702, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Madala is located in ", "Post_Mask": "."}
+{"Index": 49703, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Mezhdurechensky District is located in ", "Post_Mask": "."}
+{"Index": 49704, "Label": "Bulgaria", "Prediction": "Bulgaria", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Stara Zagora is located in ", "Post_Mask": "."}
+{"Index": 49706, "Label": "Iran", "Prediction": "Iran", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Lajran Rural District is located in ", "Post_Mask": "."}
+{"Index": 49707, "Label": "Norway", "Prediction": "Norway", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Thamshavn Line is located in ", "Post_Mask": "."}
+{"Index": 49711, "Label": "Iran", "Prediction": "Iran", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Garkan Rural District is located in ", "Post_Mask": "."}
+{"Index": 49717, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kondotty is located in ", "Post_Mask": "."}
+{"Index": 49718, "Label": "Philippines", "Prediction": "Philippines", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Manila Bay is located in ", "Post_Mask": "."}
+{"Index": 49720, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Marstrand is located in ", "Post_Mask": "."}
+{"Index": 49726, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Shablykinsky District is located in ", "Post_Mask": "."}
+{"Index": 49727, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bad Vilbel is located in ", "Post_Mask": "."}
+{"Index": 49728, "Label": "Romania", "Prediction": "Romania", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Giurgiu County is located in ", "Post_Mask": "."}
+{"Index": 49730, "Label": "Thailand", "Prediction": "Thailand", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Prachin Buri River is located in ", "Post_Mask": "."}
+{"Index": 49733, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Circuit des Ardennes is located in ", "Post_Mask": "."}
+{"Index": 49734, "Label": "Croatia", "Prediction": "Croatia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Tovarnik is located in ", "Post_Mask": "."}
+{"Index": 49736, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gmina Bodzentyn is located in ", "Post_Mask": "."}
+{"Index": 49738, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Cossogno is located in ", "Post_Mask": "."}
+{"Index": 49739, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Ghatanji is located in ", "Post_Mask": "."}
+{"Index": 49741, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Pazhayangadi is located in ", "Post_Mask": "."}
+{"Index": 49743, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Tarn-et-Garonne is located in ", "Post_Mask": "."}
+{"Index": 49744, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Pampilhosa da Serra is located in ", "Post_Mask": "."}
+{"Index": 49745, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Komarichsky District is located in ", "Post_Mask": "."}
+{"Index": 49748, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Yadagirigutta Temple is located in ", "Post_Mask": "."}
+{"Index": 49750, "Label": "Japan", "Prediction": "Japan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Hida Mountains is located in ", "Post_Mask": "."}
+{"Index": 49753, "Label": "Switzerland", "Prediction": "Switzerland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Canton of Schaffhausen is located in ", "Post_Mask": "."}
+{"Index": 49755, "Label": "Croatia", "Prediction": "Croatia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Hrtkovci is located in ", "Post_Mask": "."}
+{"Index": 49758, "Label": "Malta", "Prediction": "Malta", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Fort Madalena is located in ", "Post_Mask": "."}
+{"Index": 49761, "Label": "Norway", "Prediction": "Norway", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Hornnes is located in ", "Post_Mask": "."}
+{"Index": 49762, "Label": "Yemen", "Prediction": "Yemen", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Sana'a International Airport is located in ", "Post_Mask": "."}
+{"Index": 49763, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bad Camberg is located in ", "Post_Mask": "."}
+{"Index": 49770, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Nizhneserginsky District is located in ", "Post_Mask": "."}
+{"Index": 49772, "Label": "Finland", "Prediction": "Finland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kalvola is located in ", "Post_Mask": "."}
+{"Index": 49778, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Leiria is located in ", "Post_Mask": "."}
+{"Index": 49779, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bad Wildungen is located in ", "Post_Mask": "."}
+{"Index": 49782, "Label": "Ireland", "Prediction": "Ireland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Ballydehob is located in ", "Post_Mask": "."}
+{"Index": 49786, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Rio Quente is located in ", "Post_Mask": "."}
+{"Index": 49788, "Label": "Cambodia", "Prediction": "Cambodia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Chol Kiri District is located in ", "Post_Mask": "."}
+{"Index": 49789, "Label": "Iran", "Prediction": "Iran", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Tudeshk Rural District is located in ", "Post_Mask": "."}
+{"Index": 49794, "Label": "Norway", "Prediction": "Norway", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Nesodden IF is located in ", "Post_Mask": "."}
+{"Index": 49795, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Isola Dovarese is located in ", "Post_Mask": "."}
+{"Index": 49796, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Panagarh is located in ", "Post_Mask": "."}
+{"Index": 49798, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Wallmerod is located in ", "Post_Mask": "."}
+{"Index": 49800, "Label": "Japan", "Prediction": "Japan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Minamiakita District is located in ", "Post_Mask": "."}
+{"Index": 49801, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Zbuczyn is located in ", "Post_Mask": "."}
+{"Index": 49806, "Label": "Iraq", "Prediction": "Iraq", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Erbil SC is located in ", "Post_Mask": "."}
+{"Index": 49807, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Moscato d'Asti is located in ", "Post_Mask": "."}
+{"Index": 49809, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Mukhed is located in ", "Post_Mask": "."}
+{"Index": 49812, "Label": "Iran", "Prediction": "Iran", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Banesh Rural District is located in ", "Post_Mask": "."}
+{"Index": 49813, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Capoeira is located in ", "Post_Mask": "."}
+{"Index": 49814, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Opel is located in ", "Post_Mask": "."}
+{"Index": 49815, "Label": "Japan", "Prediction": "Japan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Naruto Strait is located in ", "Post_Mask": "."}
+{"Index": 49817, "Label": "Egypt", "Prediction": "Egypt", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Temples of Abu Simbel is located in ", "Post_Mask": "."}
+{"Index": 49819, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Augustdorf is located in ", "Post_Mask": "."}
+{"Index": 49821, "Label": "Lithuania", "Prediction": "Lithuania", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Jonava District Municipality is located in ", "Post_Mask": "."}
+{"Index": 49823, "Label": "Israel", "Prediction": "Israel", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kfar Giladi is located in ", "Post_Mask": "."}
+{"Index": 49825, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Cocconato is located in ", "Post_Mask": "."}
+{"Index": 49828, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Cayeux-sur-Mer is located in ", "Post_Mask": "."}
+{"Index": 49829, "Label": "Portugal", "Prediction": "Portugal", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Santa Maria da Feira Municipality is located in ", "Post_Mask": "."}
+{"Index": 49832, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Koriya district is located in ", "Post_Mask": "."}
+{"Index": 49834, "Label": "Singapore", "Prediction": "Singapore", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Tampines Expressway is located in ", "Post_Mask": "."}
+{"Index": 49837, "Label": "Mali", "Prediction": "Mali", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bla Cercle is located in ", "Post_Mask": "."}
+{"Index": 49839, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gobind Sagar is located in ", "Post_Mask": "."}
+{"Index": 49841, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Beckingen is located in ", "Post_Mask": "."}
+{"Index": 49845, "Label": "Kenya", "Prediction": "Kenya", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Nyeri County is located in ", "Post_Mask": "."}
+{"Index": 49846, "Label": "Brazil", "Prediction": "Brazil", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Fluminense F.C. is located in ", "Post_Mask": "."}
+{"Index": 49848, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Capdenac is located in ", "Post_Mask": "."}
+{"Index": 49851, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bungsberg is located in ", "Post_Mask": "."}
+{"Index": 49854, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Borovsky District is located in ", "Post_Mask": "."}
+{"Index": 49855, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Westerburg is located in ", "Post_Mask": "."}
+{"Index": 49858, "Label": "Hungary", "Prediction": "Hungary", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Pannonhalma Archabbey is located in ", "Post_Mask": "."}
+{"Index": 49859, "Label": "Peru", "Prediction": "Peru", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Cenepa River is located in ", "Post_Mask": "."}
+{"Index": 49861, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Le Puy Foot 43 Auvergne is located in ", "Post_Mask": "."}
+{"Index": 49863, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Pontigny Abbey is located in ", "Post_Mask": "."}
+{"Index": 49864, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bzura is located in ", "Post_Mask": "."}
+{"Index": 49865, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gallese is located in ", "Post_Mask": "."}
+{"Index": 49867, "Label": "Slovenia", "Prediction": "Slovenia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Roman Catholic Archdiocese of Ljubljana is located in ", "Post_Mask": "."}
+{"Index": 49868, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Naumburg (Saale) is located in ", "Post_Mask": "."}
+{"Index": 49870, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gmina Leszno is located in ", "Post_Mask": "."}
+{"Index": 49880, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Poissy is located in ", "Post_Mask": "."}
+{"Index": 49885, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Le Fuilet is located in ", "Post_Mask": "."}
+{"Index": 49892, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Rottendorf is located in ", "Post_Mask": "."}
+{"Index": 49897, "Label": "Romania", "Prediction": "Romania", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Geaca is located in ", "Post_Mask": "."}
+{"Index": 49898, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gmina Olsztyn is located in ", "Post_Mask": "."}
+{"Index": 49901, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gmina Morawica is located in ", "Post_Mask": "."}
+{"Index": 49904, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Porto Azzurro is located in ", "Post_Mask": "."}
+{"Index": 49905, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Thiruvattar is located in ", "Post_Mask": "."}
+{"Index": 49912, "Label": "Sweden", "Prediction": "Sweden", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Eriksbergs Mekaniska Verkstad is located in ", "Post_Mask": "."}
+{"Index": 49917, "Label": "Finland", "Prediction": "Finland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kluuvi is located in ", "Post_Mask": "."}
+{"Index": 49919, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Vijayawada Junction railway station is located in ", "Post_Mask": "."}
+{"Index": 49922, "Label": "Turkey", "Prediction": "Turkey", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Pamukkale is located in ", "Post_Mask": "."}
+{"Index": 49924, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kamchatka Krai is located in ", "Post_Mask": "."}
+{"Index": 49926, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Lewin Brzeski is located in ", "Post_Mask": "."}
+{"Index": 49932, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Lauterecken-Wolfstein is located in ", "Post_Mask": "."}
+{"Index": 49934, "Label": "Peru", "Prediction": "Peru", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Huachocolpa District is located in ", "Post_Mask": "."}
+{"Index": 49936, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Munich is located in ", "Post_Mask": "."}
+{"Index": 49937, "Label": "Australia", "Prediction": "Australia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Kununurra is located in ", "Post_Mask": "."}
+{"Index": 49938, "Label": "Vietnam", "Prediction": "Vietnam", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gio Linh is located in ", "Post_Mask": "."}
+{"Index": 49941, "Label": "Spain", "Prediction": "Spain", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Montiel is located in ", "Post_Mask": "."}
+{"Index": 49946, "Label": "Ireland", "Prediction": "Ireland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "County Carlow is located in ", "Post_Mask": "."}
+{"Index": 49949, "Label": "Finland", "Prediction": "Finland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Western Finland Province is located in ", "Post_Mask": "."}
+{"Index": 49954, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Treuchtlingen is located in ", "Post_Mask": "."}
+{"Index": 49962, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Buraswa is located in ", "Post_Mask": "."}
+{"Index": 49971, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bolpur is located in ", "Post_Mask": "."}
+{"Index": 49972, "Label": "Nigeria", "Prediction": "Nigeria", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Tiv people is located in ", "Post_Mask": "."}
+{"Index": 49974, "Label": "Pakistan", "Prediction": "Pakistan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Lodhran Tehsil is located in ", "Post_Mask": "."}
+{"Index": 49976, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Battle of Montereau is located in ", "Post_Mask": "."}
+{"Index": 49980, "Label": "Romania", "Prediction": "Romania", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Transylvanian Plateau is located in ", "Post_Mask": "."}
+{"Index": 49984, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Legnica County is located in ", "Post_Mask": "."}
+{"Index": 49985, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bhopal division is located in ", "Post_Mask": "."}
+{"Index": 49990, "Label": "Afghanistan", "Prediction": "Afghanistan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Constitution of Afghanistan is located in ", "Post_Mask": "."}
+{"Index": 49991, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "National Highway 45 is located in ", "Post_Mask": "."}
+{"Index": 49992, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Attingal is located in ", "Post_Mask": "."}
+{"Index": 49997, "Label": "Norway", "Prediction": "Norway", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Imsland is located in ", "Post_Mask": "."}
+{"Index": 50003, "Label": "Norway", "Prediction": "Norway", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Sarpsborg 08 FF is located in ", "Post_Mask": "."}
+{"Index": 50006, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Boinpalle mandal is located in ", "Post_Mask": "."}
+{"Index": 50008, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Medaram is located in ", "Post_Mask": "."}
+{"Index": 50009, "Label": "Japan", "Prediction": "Japan", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Ginza is located in ", "Post_Mask": "."}
+{"Index": 50010, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gmina Pokrzywnica is located in ", "Post_Mask": "."}
+{"Index": 50017, "Label": "Singapore", "Prediction": "Singapore", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "ITE College East is located in ", "Post_Mask": "."}
+{"Index": 50019, "Label": "Romania", "Prediction": "Romania", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Valea lui Mihai is located in ", "Post_Mask": "."}
+{"Index": 50021, "Label": "Germany", "Prediction": "Germany", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Ruthweiler is located in ", "Post_Mask": "."}
+{"Index": 50025, "Label": "Yemen", "Prediction": "Yemen", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Aden is located in ", "Post_Mask": "."}
+{"Index": 50026, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Tehri Garhwal district is located in ", "Post_Mask": "."}
+{"Index": 50030, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "2009 Speedway Ekstraliga is located in ", "Post_Mask": "."}
+{"Index": 50034, "Label": "Spain", "Prediction": "Spain", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Lleida is located in ", "Post_Mask": "."}
+{"Index": 50035, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Villa La Pietra is located in ", "Post_Mask": "."}
+{"Index": 50039, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Papanasam is located in ", "Post_Mask": "."}
+{"Index": 50040, "Label": "Canada", "Prediction": "Canada", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "West Royalty, Prince Edward Island is located in ", "Post_Mask": "."}
+{"Index": 50042, "Label": "Spain", "Prediction": "Spain", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bilbao is located in ", "Post_Mask": "."}
+{"Index": 50044, "Label": "Denmark", "Prediction": "Denmark", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Danish Sign Language is located in ", "Post_Mask": "."}
+{"Index": 50048, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Enghien-les-Bains is located in ", "Post_Mask": "."}
+{"Index": 50050, "Label": "Turkey", "Prediction": "Turkey", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Bilecik Province is located in ", "Post_Mask": "."}
+{"Index": 50054, "Label": "Spain", "Prediction": "Spain", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "La Ribera Baixa is located in ", "Post_Mask": "."}
+{"Index": 50056, "Label": "Ukraine", "Prediction": "Ukraine", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Orikhiv is located in ", "Post_Mask": "."}
+{"Index": 50060, "Label": "Italy", "Prediction": "Italy", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Mugello Circuit is located in ", "Post_Mask": "."}
+{"Index": 50061, "Label": "Guatemala", "Prediction": "Guatemala", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Guatemalan Revolution is located in ", "Post_Mask": "."}
+{"Index": 50065, "Label": "Ireland", "Prediction": "Ireland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Grianan of Aileach is located in ", "Post_Mask": "."}
+{"Index": 50066, "Label": "Madagascar", "Prediction": "Madagascar", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Ambatofinandrahana District is located in ", "Post_Mask": "."}
+{"Index": 50068, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Noliko Maaseik is located in ", "Post_Mask": "."}
+{"Index": 50071, "Label": "Belgium", "Prediction": "Belgium", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Hogeschool Gent is located in ", "Post_Mask": "."}
+{"Index": 50073, "Label": "Indonesia", "Prediction": "Indonesia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Lamongan is located in ", "Post_Mask": "."}
+{"Index": 50075, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Simdega is located in ", "Post_Mask": "."}
+{"Index": 50076, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Ulundurpet is located in ", "Post_Mask": "."}
+{"Index": 50077, "Label": "Finland", "Prediction": "Finland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Tampere Cathedral is located in ", "Post_Mask": "."}
+{"Index": 50078, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Palladam is located in ", "Post_Mask": "."}
+{"Index": 50081, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Shoranur is located in ", "Post_Mask": "."}
+{"Index": 50083, "Label": "Poland", "Prediction": "Poland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Gmina Dziemiany is located in ", "Post_Mask": "."}
+{"Index": 50088, "Label": "France", "Prediction": "France", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Guillaumes is located in ", "Post_Mask": "."}
+{"Index": 50089, "Label": "Ireland", "Prediction": "Ireland", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Blackrock Castle is located in ", "Post_Mask": "."}
+{"Index": 50099, "Label": "Austria", "Prediction": "Austria", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "SV Ried is located in ", "Post_Mask": "."}
+{"Index": 50100, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Honnavar is located in ", "Post_Mask": "."}
+{"Index": 50111, "Label": "India", "Prediction": "India", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Pandoh Dam is located in ", "Post_Mask": "."}
+{"Index": 50112, "Label": "Russia", "Prediction": "Russia", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Andreapolsky District is located in ", "Post_Mask": "."}
+{"Index": 50114, "Label": "Mexico", "Prediction": "Mexico", "Dataset": "P17", "Prompt": "[X] is located in [Y] .", "Correct": true, "Pre_Mask": "Campeche Bank is located in ", "Post_Mask": "."}
