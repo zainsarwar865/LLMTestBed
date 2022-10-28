@@ -716,30 +716,20 @@ parser.add_argument('--remove_periods', default=False, action='store_true')
 parser.add_argument('--num-cand', type=int, default=10)
 parser.add_argument('--start_idx', type=int, default=0)
 parser.add_argument('--end_idx', type=int, default=500)
-
-
 #/home/zsarwar/NLP/autoprompt/data/datasets/final/correctly_classified_bert_large_cased_autoprompt_format_single_entity_500.jsonl
 #/home/zsarwar/NLP/autoprompt/data/datasets/final/correctly_classified_roberta_large_single_entity_500.jsonl
-
 args = parser.parse_args()
 if args.debug:
         level = logging.DEBUG
 else:
         level = logging.INFO
-
 if 'roberta' in args.model_name:
-    args.template = "<s>[T].{Pre_Mask}[P]{Post_Mask}</s>"
+    args.template = "<s>{Pre_Mask}[P]{Post_Mask}[T]</s>"
     args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/roberta_large_single_entity_2500.jsonl")
 elif 'bert' in args.model_name:
     args.template = "[CLS]{Pre_Mask}[P]{Post_Mask}[T][SEP]"
     args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/bert_large_cased_single_entity_2500.jsonl")
-
-
 logfile = "/home/zsarwar/NLP/autoprompt/autoprompt/Results/"+ str(args.train).split("/")[-1].split(".")[0]  +  "_" + args.logfile    
 numpy_file = "/home/zsarwar/NLP/autoprompt/autoprompt/Results/Arrays/" + str(args.train).split("/")[-1].split(".")[0]  +  "_" + args.logfile + ".npy"
-
 logging.basicConfig(filename=logfile,level=level)
-
-
-
 run_model(args)
