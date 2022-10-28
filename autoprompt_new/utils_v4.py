@@ -159,8 +159,9 @@ class TriggerTemplatizer:
 
         if(self._remove_periods):
             if('roberta' in self._model):
-                if text[-8] == ".":
-                    text=(text[::-1].replace(".", "", 1))[::-1]
+                if text[6] == ".":
+                    text=(text.replace(".", "", 1))
+            
             elif('bert' in self._model):
                 if text[-9] == ".":
                     text=(text[::-1].replace(".", "", 1))[::-1]
@@ -228,7 +229,8 @@ def load_trigger_dataset(fname, templatizer, use_ctx, start_idx, end_idx=10000, 
     loader = LOADERS[fname.suffix]
     loader_list = list(loader(fname))
     instances = []
-    for idx, x in enumerate(range(start_idx, end_idx), start_idx):
+    end_idx = min(end_idx, len(loader_list))
+    for idx, x in enumerate(range(start_idx, end_idx), start_idx):  
         try:
             if use_ctx:
                 # For relation extraction, skip facts that don't have context sentence
