@@ -20,6 +20,7 @@ import spacy
 from spacy import displacy
 import nltk 
 import autoprompt.utils_v4 as utils_v4
+from transformers import set_seed as ss
 
 NER = spacy.load("en_core_web_sm")
 logger = logging.getLogger(__name__)
@@ -126,6 +127,7 @@ def set_seed(seed: int):
     np.random.seed(seed)
     torch.random.manual_seed(seed)
     torch.cuda.manual_seed(seed)
+    ss(seed)
 
 def get_embeddings(model, config):
     """
@@ -272,6 +274,7 @@ def run_model(args):
         tokenize_labels=args.tokenize_labels,
         add_special_tokens=False,
         remove_periods=args.remove_periods,
+        replace_period_with_comma=args.replace_period_with_comma,
         use_ctx=args.use_ctx
     )
     # Obtain the initial trigger tokens and label mapping
@@ -370,7 +373,10 @@ def run_model(args):
     numerator = 0
     numerator_acc = 0
     denominator = 0
+    
+
     for idx, (model_inputs, labels) in tqdm(enumerate(train_loader)):
+
         model_inputs = {k: v.to(device) for k, v in model_inputs.items()}
         all_indices.append(idx)
         labels = labels.to(device)
@@ -395,13 +401,6 @@ def run_model(args):
     best_dev_metric = 10
     best_dev_acc_metric = 1
 
-
-
-
-
-
-
-
     # precalculating the normalized embeddings
     embed_norm = torch.linalg.vector_norm(embeddings.weight, dim=1)
     normalized_embedding_weights = torch.transpose(
@@ -409,8 +408,6 @@ def run_model(args):
         0,
         1
     )
-
-
     if args.include_gpt:
         # intializing GPT-2
         gpt_model = GPT2LMHeadModel.from_pretrained('gpt2-xl')
@@ -418,8 +415,6 @@ def run_model(args):
         gpt_tokenizer.pad_token_id = gpt_tokenizer.eos_token_id
         gpt_tokenizer.padding_side = "left"
         gpt_model = gpt_model.to(device)
-
-
 
     all_model_inputs_triggers = []
     all_labels_triggers = []
@@ -431,9 +426,7 @@ def run_model(args):
     all_indices_triggers = []
     all_sub_indices_triggers = []
     all_first_success_ranks = []
-
-
-
+    all_losses = []
     new_example = True
     total_samples = 0
     total_incorrect = 0
@@ -441,6 +434,8 @@ def run_model(args):
     averaged_grad = None
     # Accumulate
     for idx, (model_inputs, labels) in tqdm(enumerate(train_loader)):
+        logger.info(f"Total successes  : {total_incorrect}")
+        curr_losses = []
         new_example=True
         total_samples+=1    
         # Start from scratch for each example
@@ -457,6 +452,7 @@ def run_model(args):
             model.zero_grad()
             predict_logits, _ = predictor(model_inputs, trigger_ids)
             loss = get_loss(predict_logits, labels).mean()
+            curr_losses.append(-loss.unsqueeze(0))
             loss.backward()
             grad = embedding_gradient.get()
             bsz, _, emb_dim = grad.size()
@@ -465,7 +461,6 @@ def run_model(args):
             grad = grad.view(bsz, templatizer.num_trigger_tokens, emb_dim)
             averaged_grad = grad.sum(dim=0)
             all_labels_triggers.append(labels)
-
             # Compute adv tokens in any case    
             candidates = hotflip_attack(averaged_grad[token_to_flip],
                                         normalized_embedding_weights,
@@ -499,7 +494,6 @@ def run_model(args):
             # Batched og + trigger prompts in text form
             original_prompts = tokenizer.batch_decode(original_prompt_ids, skip_special_tokens=True)
             candidates_strs = tokenizer.batch_decode(candidates.unsqueeze(1))
-            
             if(args.include_adv_token):
                 if("roberta" in args.model_name):
                     pre_text = [candidates_strs[i] + original_prompts[i] for i in range(len(original_prompts))]
@@ -509,124 +503,141 @@ def run_model(args):
                 pre_text = [original_prompts[i] for i in range(len(original_prompts))]
 
             skip_indices = []
-            if(args.include_gpt):
-                # Encode for GPT-2 Generations and generate
-                gpt_encoded_prompts = gpt_tokenizer.batch_encode_plus(pre_text, add_special_tokens=True, return_attention_mask=True, padding='longest', return_tensors='pt').to(device) 
-                all_gpt_encodings.append(gpt_encoded_prompts)
-                with torch.no_grad():
-                    gpt_outputs = gpt_model.generate(inputs=gpt_encoded_prompts['input_ids'], attention_mask=gpt_encoded_prompts['attention_mask'], do_sample=True, top_p=0.96, output_scores=False, return_dict_in_generate=True, max_length=100)
-                num_tokens = gpt_encoded_prompts['input_ids'][0].numel()
-                # Need Entire GPT-2 Text here for entire text
-                gpt_all_tokens = gpt_outputs['sequences']
-                all_gpt_generations.append(gpt_all_tokens)
-                gpt_all_tokens_str = gpt_tokenizer.batch_decode(gpt_all_tokens, skip_special_tokens=True)
-                #NLTK for all_tokens    
-                gpt_all_str_sents = [tokenize.sent_tokenize(sent) for sent in gpt_all_tokens_str]
-                
-                if(args.remove_periods):
-                    gpt_gen_with_og = [all_sents[0] for all_sents in gpt_all_str_sents]
-                else:
-                    gpt_gen_with_og = [' '.join(all_sents[0:2]) for all_sents in gpt_all_str_sents]             
-                entire_text = gpt_gen_with_og
-                # Separate the newly generated tokens
-                gpt_new_tokens = gpt_outputs['sequences'][:, num_tokens:]
-                gpt_new_tokens_str = gpt_tokenizer.batch_decode(gpt_new_tokens, skip_special_tokens=True)
-                # NLTK for new_tokens
-                gpt_new_str_sents = [tokenize.sent_tokenize(sent) for sent in gpt_new_tokens_str]
-                gpt_gen = [all_sents[0] if(len(all_sents) >= 1 ) else "SKIPPING" for all_sents in gpt_new_str_sents]
-                skip_indices = [i for i, sent in enumerate(gpt_gen) if sent == "SKIPPING"]
-                # Maybe add length check?
+            curr_attempt = 0
+            found_adv_gen = False
+            non_gpt_session=False
             
-            elif(args.include_adv_token):
-                skip_indices = []
-                entire_text = pre_text
-
-            #TODO Add condition for wikipedia
-            
-            
-            
-            
-            # Retokenize trigger tokens into bert with adv. tokens or gpt_generations or wikipedia text or any combination of them.
-            # Everything needs to be in text here    
-            # Insert trigger token in the beginning
-            if(args.include_adv_token):
+            batch_gpt_encoded_prompts = []
+            batch_gpt_tokens = []
+            batch_curr_inputs = []
+            batch_curr_pred_labels = []
+            batch_sub_indices = []
+            while(curr_attempt < args.tot_gpt_attempts and not found_adv_gen):
                 if(args.include_gpt):
-                    if("roberta" in args.model_name):
-                        final_trigg_text = [candidates_strs[i] + gpt_gen[i] for i in range(len(gpt_gen))]
-                    elif("bert" in args.model_name):
-                        final_trigg_text = [" " + candidates_strs[i] + gpt_gen[i] for i in range(len(gpt_gen))]
-                else:
-                    if("roberta" in args.model_name):
-                        final_trigg_text = candidates_strs
-                    elif("bert" in args.model_name):
-                        final_trigg_text = [" " + candidates_strs[i] for i in range(len(candidates_strs))]
-            elif(args.include_gpt):
-                if("roberta" in args.model_name):
-                    final_trigg_text = gpt_gen
-                elif("bert" in args.model_name):
-                    final_trigg_text = [" " + gpt_gen[i] for i in range(len(gpt_gen))]
-            # Tokenize trigger text into to-be-attacked models token ids
-            final_trigg_tokens = tokenizer.batch_encode_plus(final_trigg_text, add_special_tokens=False)
-            all_candidates = final_trigg_tokens['input_ids']
-            # Evaluate with adversarial prompts
-            curr_inputs = []
-            curr_pred_labels = []
-
-            sub_indices = []
-
-            for j in range(len(all_candidates)):
-                
-                if j not in skip_indices:
-                    trigg_toks = torch.tensor(all_candidates[j], device=device).unsqueeze(0)
+                    # Encode for GPT-2 Generations and generate
+                    gpt_encoded_prompts = gpt_tokenizer.batch_encode_plus(pre_text, add_special_tokens=True, return_attention_mask=True, padding='longest', return_tensors='pt').to(device) 
+                    batch_gpt_encoded_prompts.append(gpt_encoded_prompts)
+                    #all_gpt_encodings.append(gpt_encoded_prompts)
                     with torch.no_grad():
-                        predict_logits, m_inpts = predictor(model_inputs, trigg_toks)
-                        eval_metric = evaluation_fn(predict_logits, labels)
-                        pred_label = get_pred_label(predict_logits, labels, tokenizer)
-                        eval_attack_acc_metric = compute_accuracy(predict_logits, labels)
-                    curr_inputs.append(m_inpts)
-                    curr_pred_labels.append(pred_label)
-                    candidate_scores[j] = eval_metric.sum()
-                    candidate_accs[j] = eval_attack_acc_metric
-                    candidate_pred_labels[j] = pred_label
-                else:
-                    logger.info("Skipping because of empty generation sequence")
-                    curr_inputs.append(-100)
-                    curr_pred_labels.append(-100)
-            all_model_inputs_triggers.append(curr_inputs)
-            all_pred_labels_triggers.append(curr_pred_labels)
-            # Print and save successful prompts
-            if(candidate_accs == 0).any():
-                first_succ_idx = candidate_accs.argmin()
-                all_first_success_ranks.append(first_succ_idx)
-                total_incorrect+=1
-                logger.info(f"Index  : {idx}")
-                logger.info(f"Original  : {original_prompts[0]}")
-                real_label = tokenizer.convert_ids_to_tokens(labels)
-                for index, candidate_acc in enumerate(candidate_accs):
-                    sub_indices.append(index)
-                    if index not in skip_indices:
-                        if candidate_acc != 0:
-                            continue
-                        adv_lab = candidate_pred_labels[index].item()
-                        # Replace only the first instance of the true label with the predicted (adversarial) label
+                        set_seed(curr_attempt)
+                        gpt_outputs = gpt_model.generate(inputs=gpt_encoded_prompts['input_ids'], attention_mask=gpt_encoded_prompts['attention_mask'], do_sample=True, top_p=0.96, output_scores=False, return_dict_in_generate=True, max_length=100)
+                    num_tokens = gpt_encoded_prompts['input_ids'][0].numel()
+                    # Need Entire GPT-2 Text here for entire text
+                    gpt_all_tokens = gpt_outputs['sequences']
+                    batch_gpt_tokens+=gpt_all_tokens
+                    #all_gpt_generations.append(gpt_all_tokens)
+                    gpt_all_tokens_str = gpt_tokenizer.batch_decode(gpt_all_tokens, skip_special_tokens=True)
+                    #NLTK for all_tokens    
+                    gpt_all_str_sents = [tokenize.sent_tokenize(sent) for sent in gpt_all_tokens_str]
+                    
+                    if(args.remove_periods or args.replace_period_with_comma):
+                        gpt_gen_with_og = [all_sents[0] for all_sents in gpt_all_str_sents]
+                    else:
+                        gpt_gen_with_og = [' '.join(all_sents[0:2]) for all_sents in gpt_all_str_sents]             
+                    entire_text = gpt_gen_with_og
+                    # Separate the newly generated tokens
+                    gpt_new_tokens = gpt_outputs['sequences'][:, num_tokens:]
+                    gpt_new_tokens_str = gpt_tokenizer.batch_decode(gpt_new_tokens, skip_special_tokens=True)
+                    # NLTK for new_tokens
+                    gpt_new_str_sents = [tokenize.sent_tokenize(sent) for sent in gpt_new_tokens_str]
+                    gpt_gen = [all_sents[0] if(len(all_sents) >= 1 ) else "SKIPPING" for all_sents in gpt_new_str_sents]
+                    skip_indices = [i for i, sent in enumerate(gpt_gen) if sent == "SKIPPING"]
+                    # Maybe add length check?
+                elif(args.include_adv_token):
+                    skip_indices = []
+                    entire_text = pre_text
+                #TODO Add condition for wikipedia        
+                # Retokenize trigger tokens into bert with adv. tokens or gpt_generations or wikipedia text or any combination of them.
+                # Everything needs to be in text here    
+                # Insert trigger token in the beginning
+                if(args.include_adv_token):
+                    if(args.include_gpt):
+                        if("roberta" in args.model_name):
+                            final_trigg_text = [candidates_strs[i] + gpt_gen[i] for i in range(len(gpt_gen))]
+                        elif("bert" in args.model_name):
+                            final_trigg_text = [" " + candidates_strs[i] + gpt_gen[i] for i in range(len(gpt_gen))]   
+                    else:
+                        if("roberta" in args.model_name):
+                            final_trigg_text = candidates_strs
+                        elif("bert" in args.model_name):
+                            final_trigg_text = [" " + candidates_strs[i] for i in range(len(candidates_strs))]
+                            # Only so that non-GPT setting does not have to loop
+                elif(args.include_gpt):
                     if("roberta" in args.model_name):
-                        encoded_entire_text = tokenizer.encode(entire_text[index])
-                        encoded_entire_text[rep_token_idx] = adv_lab
-                        entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=True)
-                        adv_text_pred = entire_text[index]
+                        final_trigg_text = gpt_gen
                     elif("bert" in args.model_name):
+                        final_trigg_text = [" " + gpt_gen[i] for i in range(len(gpt_gen))]
+                # Tokenize trigger text into to-be-attacked models token ids
+                final_trigg_tokens = tokenizer.batch_encode_plus(final_trigg_text, add_special_tokens=False)
+                all_candidates = final_trigg_tokens['input_ids']
+                # Evaluate with adversarial prompts
+                curr_inputs = []
+                curr_pred_labels = []
+                sub_indices = []
+                for j in range(len(all_candidates)): 
+                    if j not in skip_indices:
+                        trigg_toks = torch.tensor(all_candidates[j], device=device).unsqueeze(0)
+                        with torch.no_grad():
+                            predict_logits, m_inpts = predictor(model_inputs, trigg_toks)
+                            eval_metric = evaluation_fn(predict_logits, labels)
+                            curr_losses.append(eval_metric)
+                            pred_label= get_pred_label(predict_logits, labels, tokenizer)
+                            eval_attack_acc_metric = compute_accuracy(predict_logits, labels)
+                        curr_inputs.append(m_inpts)
+                        curr_pred_labels.append(pred_label)
+                        candidate_scores[j] = eval_metric.sum()
+                        candidate_accs[j] = eval_attack_acc_metric
+                        candidate_pred_labels[j] = pred_label
+                    else:
+                        logger.info("Skipping because of empty generation sequence")
+                        curr_inputs.append(-100)
+                        curr_pred_labels.append(-100)
+                batch_curr_inputs+=curr_inputs
+                batch_curr_pred_labels+=curr_pred_labels
+                # Print and save successful prompts
+                
+                logger.info(f"Batch  : {curr_attempt}")
+                all_cands = torch.where(candidate_accs == 0)[0]
+                true_cands = torch.tensor([cand for cand in all_cands if cand not in skip_indices], device=device)
+                if(true_cands.shape[0] >= 1):    
+                    first_succ_idx = true_cands[0]
+                    logger.info(f"Index  : {idx}")
+                    logger.info(f"Original  : {original_prompts[0]}")
+                    real_label = tokenizer.convert_ids_to_tokens(labels)
+                    for index in true_cands:
+                        sub_indices.append(index)
+                        if(not found_adv_gen):
+                            total_incorrect+=1
+                            all_first_success_ranks.append(first_succ_idx)
+                            found_adv_gen = True
+                            if(not args.include_gpt):
+                                non_gpt_session = True
+
+                        adv_lab = candidate_pred_labels[index].item()
+                        #Replace only the first instance of the true label with the predicted (adversarial) label
                         encoded_entire_text = tokenizer.encode(entire_text[index])
                         encoded_entire_text[rep_token_idx] = adv_lab
                         entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=True)
                         adv_text_pred = entire_text[index]
-                    trigger_ids = all_candidates[index]
-                    logger.info(f"Adversarial {index}: {adv_text_pred}")
-                        
-                logger.info(f"\n\n")
-                all_sub_indices_triggers.append(sub_indices)
-                break
-            else:
-                all_first_success_ranks.append(-100)
+                        trigger_ids = all_candidates[index]
+                        logger.info(f"Adversarial {index + 10*curr_attempt}: {adv_text_pred}")       
+                    logger.info(f"\n\n")
+                    #all_sub_indices_triggers.append(sub_indices)
+                    batch_sub_indices+=sub_indices
+                    break
+                else:
+                    curr_attempt+=1
+                    if(curr_attempt == args.tot_gpt_attempts -1):
+                        all_first_success_ranks.append(-100)
+                    if(found_adv_gen or non_gpt_session or not args.include_gpt):
+                        break    
+            # GPT_Generations finished, now appending batched inputs
+            all_gpt_encodings.append(batch_gpt_encoded_prompts)
+            all_gpt_generations.append(batch_gpt_tokens)
+            all_model_inputs_triggers.append(batch_curr_inputs)
+            all_pred_labels_triggers.append(batch_curr_pred_labels)
+            all_sub_indices_triggers.append(batch_sub_indices)
+            all_losses.append(curr_losses)
             break
     flip_rate = total_incorrect / total_samples + 1e-32
     logger.info(f"Total incorrect are : {total_incorrect}")
@@ -634,19 +645,13 @@ def run_model(args):
     logger.info(f"Flip rate is : {flip_rate}")
     # Saving results
     all_results_dict = {}
-
     results_baseline = {}
     results_baseline['all_model_inputs'] = all_model_inputs
     results_baseline['all_labels'] = all_labels
     results_baseline['all_pred_labels'] = all_pred_labels
     results_baseline['all_indices'] = all_indices
-
-
     all_results_dict['results_baseline'] = results_baseline
-
-
     results_adversarial = {}
-
     results_adversarial['all_model_inputs_triggers'] = all_model_inputs_triggers
     results_adversarial['all_labels_triggers'] = all_labels_triggers
     results_adversarial['all_pred_labels_triggers'] = all_pred_labels_triggers
@@ -656,20 +661,10 @@ def run_model(args):
     results_adversarial['all_adv_tokens'] = all_adv_tokens
     results_adversarial['all_indices_triggers'] = all_indices_triggers
     results_adversarial['all_sub_indices_triggers'] = all_sub_indices_triggers
-
+    results_adversarial['all_first_success_ranks'] = all_first_success_ranks
+    results_adversarial['all_losses'] = all_losses
     all_results_dict['results_adversarial'] = results_adversarial
-
-
-    tokenizer.decode(all_results_dict['results_adversarial']["all_model_inputs_triggers"][4][5]['input_ids'][0])
-
-
     np.save(numpy_file, all_results_dict, allow_pickle=True)
-
-
-    loaded_dict = np.load(numpy_file, allow_pickle=True)
-    loaded_dict = loaded_dict.item()
-
-
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--label-map', type=str, default=None, help='JSON object defining label map')
@@ -706,7 +701,7 @@ parser.add_argument('--debug', action='store_true')
 
 # Arguments needed in bashfile
 parser.add_argument('--train', type=Path)
-parser.add_argument('--template', type=str,default='<s>{Pre_Mask}[P]{Post_Mask}[T]</s>', help='Template string', required=False)
+parser.add_argument('--template', type=str,default='<s>{Pre_Mask}[Predict_Token]{Post_Mask}[Trigger_Token]</s>', help='Template string', required=False)
 parser.add_argument('--filtered_vocab', type=str, default=None, help='JSON object defining label map')
 parser.add_argument('--model-name', type=str, default='bert-large-cased')
 parser.add_argument('--include_gpt', action='store_true', default=False)
@@ -716,6 +711,8 @@ parser.add_argument('--remove_periods', default=False, action='store_true')
 parser.add_argument('--num-cand', type=int, default=10)
 parser.add_argument('--start_idx', type=int, default=0)
 parser.add_argument('--end_idx', type=int, default=500)
+parser.add_argument('--tot_gpt_attempts', type=int, default=10)
+parser.add_argument('--replace_period_with_comma', action='store_true', default=False)
 #/home/zsarwar/NLP/autoprompt/data/datasets/final/correctly_classified_bert_large_cased_autoprompt_format_single_entity_500.jsonl
 #/home/zsarwar/NLP/autoprompt/data/datasets/final/correctly_classified_roberta_large_single_entity_500.jsonl
 args = parser.parse_args()
@@ -724,11 +721,12 @@ if args.debug:
 else:
         level = logging.INFO
 if 'roberta' in args.model_name:
-    args.template = "<s>{Pre_Mask}[P]{Post_Mask}[T]</s>"
+    args.template = "<s>{Pre_Mask}[Predict_Token]{Post_Mask}[Trigger_Token]</s>"
     args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/roberta_large_single_entity_2500.jsonl")
 elif 'bert' in args.model_name:
-    args.template = "[CLS]{Pre_Mask}[P]{Post_Mask}[T][SEP]"
-    args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/bert_large_cased_single_entity_2500.jsonl")
+    args.template = "[CLS]{Pre_Mask}[Predict_Token]{Post_Mask}[Trigger_Token][SEP]"
+    #args.template = "[CLS]{Pre_Mask}[Predict_Token]{Post_Mask}[Trigger_Token].[SEP]"
+    args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/bert_large_cased_2500.jsonl")
 logfile = "/home/zsarwar/NLP/autoprompt/autoprompt/Results/"+ str(args.train).split("/")[-1].split(".")[0]  +  "_" + args.logfile    
 numpy_file = "/home/zsarwar/NLP/autoprompt/autoprompt/Results/Arrays/" + str(args.train).split("/")[-1].split(".")[0]  +  "_" + args.logfile + ".npy"
 logging.basicConfig(filename=logfile,level=level)

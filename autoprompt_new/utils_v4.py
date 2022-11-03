@@ -120,6 +120,7 @@ class TriggerTemplatizer:
                  tokenize_labels=False,
                  add_special_tokens=False,
                  remove_periods=False,
+                 replace_period_with_comma=False,
                  use_ctx=False):
         if not hasattr(tokenizer, 'predict_token') or \
            not hasattr(tokenizer, 'trigger_token'):
@@ -137,10 +138,11 @@ class TriggerTemplatizer:
         self._use_ctx = use_ctx
         self._model = model
         self._remove_periods = remove_periods
+        self._replace_period_with_comma = replace_period_with_comma
 
     @property   
     def num_trigger_tokens(self):
-        return self._template.count('[T]')
+        return self._template.count('[Trigger_Token]')
 
     def __call__(self, format_kwargs):
         # Format the template string
@@ -153,18 +155,30 @@ class TriggerTemplatizer:
         # - Create a trigger and predict mask
         # - Replace the predict token with a mask token
         
-        text = text.replace(" [P]", "[P]").replace("[P] ", "[P]")
+        text = text.replace(" [Predict_Token]", "[Predict_Token]").replace("[Predict_Token] ", "[Predict_Token]")
         text = text.replace(" .", ".")
 
 
         if(self._remove_periods):
             if('roberta' in self._model):
                 if text[6] == ".":
-                    text=(text.replace(".", "", 1))
+                    print("FIX roberta error in uitls line 164")
+                    text=(text[::-1].replace(".", "", 1))[::-1]
             
             elif('bert' in self._model):
-                if text[-9] == ".":
+                if text[-21] == ".":
                     text=(text[::-1].replace(".", "", 1))[::-1]
+        
+        elif(self._replace_period_with_comma):
+            if('roberta' in self._model):
+                print("FIX roberta error in uitls line 164")
+                if text[6] == ".":
+                    text=(text[::-1].replace(".", ",", 1))[::-1]
+            
+            elif('bert' in self._model):
+                if text[-21] == ".":
+                    text=(text[::-1].replace(".", "dna ,", 1))[::-1]
+
         
         model_inputs = self._tokenizer.encode_plus(
             text,
@@ -197,12 +211,12 @@ class TriggerTemplatizer:
 
 def add_task_specific_tokens(tokenizer):
     tokenizer.add_special_tokens({
-        'additional_special_tokens': ['[T]', '[P]', '[Y]']
+        'additional_special_tokens': ['[Trigger_Token]', '[Predict_Token]', '[Y]']
     })
-    tokenizer.trigger_token = '[T]'
-    tokenizer.trigger_token_id = tokenizer.convert_tokens_to_ids('[T]')
-    tokenizer.predict_token = '[P]'
-    tokenizer.predict_token_id = tokenizer.convert_tokens_to_ids('[P]')
+    tokenizer.trigger_token = '[Trigger_Token]'
+    tokenizer.trigger_token_id = tokenizer.convert_tokens_to_ids('[Trigger_Token]')
+    tokenizer.predict_token = '[Predict_Token]'
+    tokenizer.predict_token_id = tokenizer.convert_tokens_to_ids('[Predict_Token]')
     # NOTE: BERT and RoBERTa tokenizers work properly if [X] is not a special token...
     # tokenizer.lama_x = '[X]'
     # tokenizer.lama_x_id = tokenizer.convert_tokens_to_ids('[X]')
