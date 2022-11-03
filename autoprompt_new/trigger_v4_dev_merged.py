@@ -600,7 +600,7 @@ def run_model(args):
                 all_cands = torch.where(candidate_accs == 0)[0]
                 true_cands = torch.tensor([cand for cand in all_cands if cand not in skip_indices], device=device)
                 if(true_cands.shape[0] >= 1):    
-                    first_succ_idx = true_cands[0]
+                    first_succ_idx = true_cands[0] + args.num_cand*curr_attempt
                     logger.info(f"Index  : {idx}")
                     logger.info(f"Original  : {original_prompts[0]}")
                     real_label = tokenizer.convert_ids_to_tokens(labels)
@@ -620,7 +620,7 @@ def run_model(args):
                         entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=True)
                         adv_text_pred = entire_text[index]
                         trigger_ids = all_candidates[index]
-                        logger.info(f"Adversarial {index + 10*curr_attempt}: {adv_text_pred}")       
+                        logger.info(f"Adversarial {index + args.num_cand*curr_attempt}: {adv_text_pred}")       
                     logger.info(f"\n\n")
                     #all_sub_indices_triggers.append(sub_indices)
                     batch_sub_indices+=sub_indices
