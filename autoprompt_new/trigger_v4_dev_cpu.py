@@ -18,7 +18,7 @@ from nltk import tokenize
 import spacy
 from spacy import displacy
 import nltk 
-import autoprompt.utils_v4 as utils_v4
+import autoprompt.utils_v4_extended as utils_v4
 from transformers import set_seed as ss
 
 NER = spacy.load("en_core_web_sm")
@@ -576,13 +576,24 @@ def run_model(args):
             temp_triggers = temp_trigger.repeat(len(candidates), 1)
             temp_triggers[:, token_to_flip] = candidates
             # Batched og + trigger prompts in text form
-            original_prompts = tokenizer.batch_decode(original_prompt_ids, skip_special_tokens=True)
+            if(args.template_trigger_phrase):
+                original_prompts = tokenizer.batch_decode(original_prompt_ids, skip_special_tokens=False)
+            else:
+                original_prompts = tokenizer.batch_decode(original_prompt_ids, skip_special_tokens=True)
+
+            
             candidates_strs = tokenizer.batch_decode(candidates.unsqueeze(1))
             if(args.include_adv_token):
                 if("roberta" in args.model_name):
-                    pre_text = [candidates_strs[i] + original_prompts[i] for i in range(len(original_prompts))]
+                    if(args.template_trigger_phrase):
+                        pre_text = [original_prompts[i][::-1].replace('[Trigger_Token]'[::-1], candidates_strs[i][::-1], 1)[::-1] for i in range(len(original_prompts))]
+                    else:
+                        pre_text = [candidates_strs[i] + original_prompts[i] for i in range(len(original_prompts))]
                 elif("bert" in args.model_name):
-                    pre_text = [original_prompts[i] + " " + candidates_strs[i] for i in range(len(original_prompts))]    
+                    if(args.template_trigger_phrase):
+                        pre_text = [original_prompts[i][::-1].replace('[Trigger_Token]'[::-1], candidates_strs[i][::-1], 1)[::-1] for i in range(len(original_prompts))]
+                    else:
+                        pre_text = [original_prompts[i] + " " + candidates_strs[i] for i in range(len(original_prompts))]    
             else:
                 pre_text = [original_prompts[i] for i in range(len(original_prompts))]
 
@@ -706,9 +717,17 @@ def run_model(args):
 
                         adv_lab = candidate_pred_labels[index].item()
                         #Replace only the first instance of the true label with the predicted (adversarial) label
-                        encoded_entire_text = tokenizer.encode(entire_text[index])
-                        encoded_entire_text[rep_token_idx] = adv_lab
-                        entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=True)
+                        
+                        if(args.template_trigger_phrase):
+                            encoded_entire_text = tokenizer.encode(entire_text[index], add_special_tokens=False)
+                            encoded_entire_text[rep_token_idx] = adv_lab
+                            entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=False)
+                        else:
+                            encoded_entire_text = tokenizer.encode(entire_text[index])
+                            encoded_entire_text[rep_token_idx] = adv_lab
+                            entire_text[index] = tokenizer.decode(encoded_entire_text, skip_special_tokens=True)
+
+
                         adv_text_pred = entire_text[index]
                         trigger_ids = all_candidates[index]
                         logger.info(f"Adversarial {index + args.num_cand*curr_attempt}: {adv_text_pred}")       
@@ -796,7 +815,6 @@ parser.add_argument('--filter', action='store_true', default=True,
 parser.add_argument('--print-lama', action='store_true',
                 help='Prints best trigger in LAMA format.')
 parser.add_argument('--logfile', type=str, default='debug_jupyter')
-parser.add_argument('--initial-trigger', nargs='+', type=str, default=None, help='Manual prompt')
 parser.add_argument('--label-field', type=str, default='Prediction',
                 help='Name of the label field')
 parser.add_argument('--bsz', type=int, default=1, help='Batch size')
@@ -829,6 +847,8 @@ parser.add_argument('--start_idx', type=int, default=0)
 parser.add_argument('--end_idx', type=int, default=500)
 parser.add_argument('--tot_gpt_attempts', type=int, default=10)
 parser.add_argument('--replace_period_with_comma', action='store_true', default=False)
+parser.add_argument('--template_trigger_phrase', action='store_true', default=False)
+parser.add_argument('--initial-trigger', nargs='+', type=str, default=['this'], help='Manual prompt')
 
 args = parser.parse_args()
 if args.debug:
@@ -840,9 +860,13 @@ if 'roberta' in args.model_name:
     args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/roberta_large_single_entity_2500.jsonl")
     args.base_template = '<s>{Pre_Mask}[Predict_Token]{Post_Mask}</s>'
 elif 'bert' in args.model_name:
-    args.template = "[CLS]{Pre_Mask}[Predict_Token]{Post_Mask}[Trigger_Token][SEP]"
-    #args.template = "[CLS]{Pre_Mask}[Predict_Token]{Post_Mask}[Trigger_Token].[SEP]"
-    args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/bert_large_cased_2500.jsonl")
+    if args.template_trigger_phrase:
+        args.template = "[CLS]{Pre_Mask}[Predict_Token]{Post_Mask}[SEP]"
+        args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/correctly_classified_bert_large_cased_single_entity_extended_phrase.jsonl")
+    else:
+        args.template = "[CLS]{Pre_Mask}[Predict_Token]{Post_Mask}[Trigger_Token][SEP]"
+        args.train = Path("/home/zsarwar/NLP/autoprompt/data/datasets/final/bert_large_cased_2500.jsonl")
+
     args.base_template = "[CLS]{Pre_Mask}[Predict_Token]{Post_Mask}[SEP]"
 
 logfile = "/home/zsarwar/NLP/autoprompt/autoprompt/Results/"+ str(args.train).split("/")[-1].split(".")[0]  +  "_" + args.logfile    
