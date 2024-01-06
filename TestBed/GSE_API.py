@@ -15,8 +15,8 @@ import pandas as pd
 import jsonlines
 
 # YOUR API KEY FOR GOOGLE SEARCH CONSOLE
-API_KEY = "AIzaSdkoejErffRRipwCskeimeF_nm5HU"
-SEID = "982498394938858583434757:-2mk2err3ps"
+API_KEY = ""
+SEID = ""
 
 
 
